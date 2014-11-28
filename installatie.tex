@@ -4,8 +4,10 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{listings}
 \begin{document}
 \graphicspath{ {./images/} }
+\lstset{language=bash}      
 \author{Steven L. Speek}
 \title{GNUAmsterdam Debian Wheezy Installatie}
 \date{\today}
@@ -19,4 +21,8 @@ Floppy stations zijn een erfenis uit het verleden. Schakel de floppy ondersteuni
 Boot van een debian installer CDROM (Op te halen op adres: www.debian.org/distrib/, kies “klein installatie-image”).
 Je komt dan in een menu. 
 Je accepteert de eerste optie {\bf Install } met 'enter'. Kies {\bf Dutch}, pijltje omhoog en dan enter. Regio/Land: {\bf Nederland} en druk enter. Kies {\bf American English}, druk op enter.
+\begin{lstlisting}[language=bash]
+$lsof -i :80
+\end{lstlisting}
+Shows open files.
 \end{document}
