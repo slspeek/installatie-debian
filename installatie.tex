@@ -17,10 +17,25 @@
 \emph{Zeer belangrijk:} Iedere vraag die door het installatie programma aan jou wordt gesteld en waarover hieronder niets staat vermeldt beantwoordt je met de enter-toets.
 \section{Floppy station onklaar maken}
 Floppy stations zijn een erfenis uit het verleden. Schakel de floppy ondersteuning in de BIOS uit. En maak de kabels verbonden met het floppy-station los.
+\section{CDROM ophalen}
+Op www.debian.org/distrib/, kies je een klein installatie-image voor jouw architectuur (meestal amd64, soms nog i686).
+Brandt dit op een CDROM, dit zullen wij de installatie CDROM noemen.
 \section{Installatie basissysteem}
-Boot van een debian installer CDROM (Op te halen op adres: www.debian.org/distrib/, kies “klein installatie-image”).
-Je komt dan in een menu. 
-Je accepteert de eerste optie {\bf Install } met 'enter'. Kies {\bf Dutch}, pijltje omhoog en dan enter. Regio/Land: {\bf Nederland} en druk enter. Kies {\bf American English}, druk op enter.
+Boot van de installatie CDROM. Je komt dan in een menu.
+Je accepteert de eerste optie \textbf{Install} met enter.
+Op het volgende scherm kun je de taal kiezen; kies \textbf{Dutch} (pijltje omhoog en dan enter).
+Regio/Land: \textbf{Nederland} en druk enter.
+Voor de toetsenbordindeling kies je \textbf{American English}, druk op enter.
+Vul \textbf{debian} in als computernaam en druk op enter.
+En vul \textbf{lan} in bij domeinnaam en druk op enter.
+Nu moeten het root wachtwoord worden gezet.
+Vul als root wachtwoord in \textbf{root} (bevestigen met enter), en doe dit nogmaals ter controle.
+Je vult \textbf{Tux} in als volledige naam van de nieuwe aardse gebruiker.
+De debian installer suggereert dan \textbf{tux} als gebruikersnaam.
+Dat accepteer je met enter.
+Als wachtwoord vul je \textbf{tux} in. Dit moet nog een keer worden bevestigd.
+\section{Schijfindeling voor de verkoop}
+Kopen, hoor!
 \begin{lstlisting}[language=bash]
 $lsof -i :80
 \end{lstlisting}
