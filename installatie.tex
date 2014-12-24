@@ -7,6 +7,7 @@
 \usepackage{listings}
 \begin{document}
 \graphicspath{ {./images/} }
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
 \lstset{language=bash}      
 \author{Steven L. Speek}
 \title{GNUAmsterdam Debian Wheezy Installatie}
@@ -25,8 +26,15 @@ Brandt dit op een CDROM, dit zullen wij de installatie CDROM noemen.
 \section{Installatie basissysteem}
 Boot van de installatie CDROM. Je komt dan in een menu.
 Je accepteert de eerste optie \textbf{Install} met enter.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{taal-keuze-scherm}
+\caption{Kies hier \textbf{Dutch} als taal.}
+\label{fig:taal-keuze-scherm}
+\end{figure}
 
-Op het volgende scherm kun je de taal kiezen; kies \textbf{Dutch} (pijltje omhoog en dan enter).
+Op het volgende scherm, zie figuur ~\ref{fig:taal-keuze-scherm},  kun je de taal kiezen; kies \textbf{Dutch} (pijltje omhoog en dan enter).
+
 
 Regio/Land: \textbf{Nederland} en druk enter.
 
@@ -41,11 +49,18 @@ Vul als root wachtwoord in \textbf{root} (bevestigen met enter), en doe dit nogm
 Je vult \textbf{Tux} in als volledige naam van de nieuwe aardse gebruiker.
 De debian installer suggereert dan \textbf{tux} als gebruikersnaam.
 Dat accepteer je met enter.
+
 Als wachtwoord vul je \textbf{tux} in. Dit moet nog een keer worden bevestigd.
 \section{Schijfindeling voor de verkoop}
-Bij de schijfindeling kies je \textbf{Benut gehele schijf met LVM en encryptie}. Nadat je dit bevestigd hebt, gaat de installer de gehele disk wissen, dat kan even duren (in de orde van uren).
+Bij de schijfindeling kies je \textbf{Benut gehele schijf met LVM en encryptie}.
 
-Daarna wordt er om een wachtwoordzin gevraagd, je vult \textbf{gnu} in. Dit moet je nogmaals te controle doen. En daarna beamen dat het een zwakke wachtwoordzin is. 
+Nu moet je kiezen hoe de schijf gaat worden ingedeeld; je kiest de onderste optie \textbf{Afzondelijke /home, /usr, /var en /tmp partitie}.
+
+Nadat je dit bevestigd hebt, gaat de installer de gehele disk wissen, dat kan even duren (in de orde van uren). Je mag dit annuleren.
+
+Daarna wordt er om een wachtwoordzin gevraagd, je vult \textbf{gnu} in. Dit moet je nogmaals te controle doen.
+
+Je moet nu bevestigen dat dit een zwakke wachtwoordzin is. 
 
 Het partitie schema wordt nog eenmaal aan je getoond opdat je het nog een keer kunt controleren. Je bevestigt de voorgestelde keuze.
 
