@@ -1,4 +1,5 @@
 \documentclass[12pt,a4paper]{article}
+\usepackage[dutch]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -15,17 +16,22 @@
 \maketitle
 \abstract{Nederlandse handleiding voor een Debian desktop installatie.}
 \section{Algemene aanwijzingen}
-\emph{Zeer belangrijk:} Iedere vraag die door het installatie programma aan jou wordt gesteld en waarover hieronder niets staat vermeldt beantwoordt je met de enter-toets.
+\emph{Zeer belangrijk:} Iedere vraag die door het installatie programma aan jou wordt gesteld en waarover hieronder niets staat vermeldt beantwoordt je met de \textsc{enter}-toets.
 
 Als de debian installer naar een nieuw scherm gaat, begint er in deze handleiding een nieuwe paragraaf
 \section{Floppy station onklaar maken}
 Floppy stations zijn een erfenis uit het verleden. Schakel de floppy ondersteuning in de BIOS uit. En maak de kabels verbonden met het floppy-station los.
 \section{CDROM ophalen}
-Op www.debian.org/distrib/, kies je een klein installatie-image voor jouw architectuur (meestal amd64, soms nog i686).
+Op \texttt{www.debian.org/distrib/}, kies je een klein installatie-image voor jouw architectuur (meestal amd64, soms nog i686).
 Brandt dit op een CDROM, dit zullen wij de installatie CDROM noemen.
+
+
 \section{Installatie basissysteem}
+Wij gaan nu met de debian installer een simpel basissysteem installeren. Dit begint met het instellen van gegevens over onze plek op aarde en de taal die wij wensen te gebruiken met het nieuwe systeem.
+
 Boot van de installatie CDROM. Je komt dan in een menu.
-Je accepteert de eerste optie \textbf{Install} met enter.
+Je accepteert de eerste optie \textbf{Install} met \textsc{enter}.
+\subsection{Localisatie instellingen}
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{taal-keuze-scherm}
@@ -33,25 +39,27 @@ Je accepteert de eerste optie \textbf{Install} met enter.
 \label{fig:taal-keuze-scherm}
 \end{figure}
 
-Op het volgende scherm, zie figuur ~\ref{fig:taal-keuze-scherm},  kun je de taal kiezen; kies \textbf{Dutch} (pijltje omhoog en dan enter).
+Op het volgende scherm, zie figuur ~\ref{fig:taal-keuze-scherm},  kun je de taal kiezen; kies \textbf{Dutch} (pijltje omhoog en dan \textsc{enter}).
 
 
-Regio/Land: \textbf{Nederland} en druk enter.
+Regio/Land: \textbf{Nederland} en druk \textsc{enter}.
 
-Voor de toetsenbordindeling kies je \textbf{American English}, druk op enter.
+Voor de toetsenbordindeling kies je \textbf{American English}, druk op \textsc{enter}.
 
-Na het laden van de aanvullende installatie modules. En vragen over ontbrekende firmware, die je allen met \textbf{nee} beantwoordt. Vul je \textbf{debian} in als computernaam en drukt op enter.
-En vul je \textbf{lan} in bij domeinnaam en drukt op enter.
+\subsection{Netwerk instellingen}
+Na het laden van de aanvullende installatie modules. En vragen over ontbrekende firmware, die je allen met \textbf{nee} beantwoordt. Vul je \textbf{debian} in als computernaam en drukt op \textsc{enter}.
+En vul je \textbf{lan} in bij domeinnaam en drukt op \textsc{enter}.
 
+\subsection{Gebruikers en wachtwoorden}
 Nu moeten het root wachtwoord worden gezet.
-Vul als root wachtwoord in \textbf{root} (bevestigen met enter), en doe dit nogmaals ter controle.
+Vul als root wachtwoord in \textbf{root} (bevestigen met \textsc{enter}), en doe dit nogmaals ter controle.
 
 Je vult \textbf{Tux} in als volledige naam van de nieuwe aardse gebruiker.
 De debian installer suggereert dan \textbf{tux} als gebruikersnaam.
-Dat accepteer je met enter.
+Dat accepteer je met \textsc{enter}.
 
 Als wachtwoord vul je \textbf{tux} in. Dit moet nog een keer worden bevestigd.
-\section{Schijfindeling voor de verkoop}
+\subsection{Schijfindeling}
 Bij de schijfindeling kies je \textbf{Benut gehele schijf met LVM en encryptie}.
 
 Nu moet je kiezen hoe de schijf gaat worden ingedeeld; je kiest de onderste optie \textbf{Afzondelijke /home, /usr, /var en /tmp partitie}.
