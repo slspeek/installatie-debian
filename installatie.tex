@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{listings}
+\usepackage{float}
 \begin{document}
 \graphicspath{ {./images/} }
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
@@ -32,27 +33,50 @@ Wij gaan nu met de debian installer een simpel basissysteem installeren. Dit beg
 Boot van de installatie CDROM. Je komt dan in een menu.
 Je accepteert de eerste optie \textbf{Install} met \textsc{enter}.
 \subsection{Localisatie instellingen}
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.8\textwidth]{taal-keuze-scherm}
-\caption{Kies hier \textbf{Dutch} als taal.}
+\begin{figure}[H]
+\includegraphics[width=0.45\textwidth]{taal-keuze-scherm}
+\includegraphics[width=0.45\textwidth]{lokatie-keuze-scherm}
+\caption{Taal en lokatie instellingen.}
 \label{fig:taal-keuze-scherm}
 \end{figure}
 
-Op het volgende scherm, zie figuur ~\ref{fig:taal-keuze-scherm},  kun je de taal kiezen; kies \textbf{Dutch} (pijltje omhoog en dan \textsc{enter}).
+Op het volgende twee schermen, zie figuur ~\ref{fig:taal-keuze-scherm},  moet je de taal kiezen; kies \textbf{Dutch} (pijltje omhoog en dan \textsc{enter}). In de scherm daarna, selecteer je  \textbf{Nederland} als land en drukt op \textsc{enter}. Vanaf gaan we niet meer zeggen dat je op \textsc{enter} moet drukken.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{toetsenbord-indeling-scherm}
+\caption{Kies hier \textbf{American English}.}
+\label{fig:toetsenbord-indeling-scherm}
+\end{figure}
 
-Regio/Land: \textbf{Nederland} en druk \textsc{enter}.
-
-Voor de toetsenbordindeling kies je \textbf{American English}, druk op \textsc{enter}.
+Als toetsenbordindeling kies je \textbf{American English} (zie figuur ~\ref{fig:toetsenbord-indeling-scherm}).
 
 \subsection{Netwerk instellingen}
-Na het laden van de aanvullende installatie modules. En vragen over ontbrekende firmware, die je allen met \textbf{nee} beantwoordt. Vul je \textbf{debian} in als computernaam en drukt op \textsc{enter}.
-En vul je \textbf{lan} in bij domeinnaam en drukt op \textsc{enter}.
+Je wacht tot de debian installer de aanvullende installatie modules heeft geladen. Het kan zijn dat er vragen komen over ontbrekende firmware. Die moet je allen met \textbf{nee} beantwoorden.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{computernaam-scherm}
+\includegraphics[width=0.45\textwidth]{domeinnaam-scherm}
+\caption{Hostnaam en domeinnaam schermen.}
+\label{fig:computernaam-scherm}
+\end{figure}
+
+Vul \textbf{debian} in als computernaam (figuur \ref{fig:computernaam-scherm}).
+
+En vul \textbf{lan} in bij domeinnaam.
 
 \subsection{Gebruikers en wachtwoorden}
-Nu moeten het root wachtwoord worden gezet.
-Vul als root wachtwoord in \textbf{root} (bevestigen met \textsc{enter}), en doe dit nogmaals ter controle.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{root-wachtwoord-scherm}
+\includegraphics[width=0.45\textwidth]{root-wachtwoord-bevestiging}
+\caption{Vul hier tweemaal \textbf{root} in.}
+\label{fig:root-wachtwoord-scherm}
+\end{figure}
+Nu moeten het root wachtwoord worden gezet, zie figuur ~\ref{fig:root-wachtwoord-scherm}.
+Vul als root wachtwoord in \textbf{root}, en doe dit nogmaals ter controle.
 
 Je vult \textbf{Tux} in als volledige naam van de nieuwe aardse gebruiker.
 De debian installer suggereert dan \textbf{tux} als gebruikersnaam.
