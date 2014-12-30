@@ -132,7 +132,7 @@ Nadat je dit bevestigd hebt, gaat de installer de gehele disk wissen, dat kan ev
 \includegraphics[width=0.45\textwidth]{schijven-wachtwoordzin-scherm}
 \includegraphics[width=0.45\textwidth]{schijven-wachtwoordzin-bevestiging}
 \includegraphics[width=0.45\textwidth]{schijven-zwakke-wachtwoordzin}
-\caption{Kies hier de optie met encryptie.}
+\caption{Vul hier \textbf{gnu} in als wachtwoordzin.}
 \label{fig:wachtwoordzin-scherm}
 \end{figure}
 
@@ -142,7 +142,18 @@ Dit moet je nogmaals te controle doen.
 
 Je moet nu bevestigen dat dit een zwakke wachtwoordzin is. 
 
-Het partitie schema wordt nog eenmaal aan je getoond opdat je het nog een keer kunt controleren. Je bevestigt de voorgestelde keuze.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{schijven-overzicht-scherm}
+\includegraphics[width=0.45\textwidth]{schijven-tweede-overzicht-scherm}
+\caption{Bevestig tweemaal de gemaakte schijfindeling.}
+\label{fig:schijven-overzicht}
+\end{figure}
+
+
+Het partitie schema wordt nog eenmaal aan je getoond (figuur ~\ref{fig:schijven-overzicht}) met de mogelijkheid om wijzingen aan te brengen. Dat doe je niet, maar gaat verder.
+
+Daarna wordt het nogmaals ter bevestiging getoond, opdat je het nog \'{e}\'{e}n keer kunt controleren. Je bevestigt de voorgestelde keuze.
 
 \begin{lstlisting}[language=bash]
 $lsof -i :80
