@@ -206,14 +206,37 @@ Je gaat mee in het voorstel van figuur ~\ref{fig:grub} om GRUB in het masterboot
 \centering
 \includegraphics[width=0.45\textwidth]{grub-installatie-scherm}
 \includegraphics[width=0.45\textwidth]{installatie-afronden-scherm}
-\caption{Je laat GRUB in het masterboot record installeren en je rondt de Installatie af.}
+\caption{Je laat GRUB in het masterboot record installeren en je rondt de installatie af.}
 \label{fig:grub}
 \end{figure}
 
-\section{Debian Amsterdam specifieke Installatie}
+\section{Debian Amsterdam specifieke installatie}
+
+Omdat wij de het systeem hebben laten versleutelen moeten we bij het opstarten een wachtwoordzin opgeven om verder te gaan (figuur ~\ref{fig:diskwachtwoord}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{diskwachtwoordzin-scherm}
+\caption{Je typt hier \textbf{gnu}, gevolgd door \textsc{enter}. Merk op dat de karakters niet op het scherm verschijnen, ook niet als sterretjes.}
+\label{fig:diskwachtwoord}
+\end{figure}
+
+Nu verschijnt het tekstlogin scherm van Linux. Dit noemen we een \textit{virtual terminal}. Volg de aanwijzingen van figuur ~\ref{fig:loginprompt} op.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{loginprompt-scherm}
+\includegraphics[width=0.45\textwidth]{ingelogd-scherm}
+\caption{Achter \textbf{debian login:} type je \textbf{root}, gevolgd door \textsc{enter}, dit is tevens het wachtwoord. Dus als \textbf{Password:} verschijnt type je weer \textbf{root}, gevolgd door \textsc{enter}.}
+\label{fig:loginprompt}
+\end{figure}
+
+Nu zie je in het scherm een \textbf{\#}, dit betekent dat je bent aangemeld als beheerder.
+Nu gaan wij onze Debian Amsterdam scripts ophalen met het volgende commando:
+
 
 \begin{lstlisting}[language=bash]
-$lsof -i :80
+wget --no-check-certificate -q -O- goo.gl/WHL7kR | sh
 \end{lstlisting}
-Shows open files.
+
 \end{document}
