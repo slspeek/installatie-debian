@@ -116,7 +116,7 @@ Bij de schijfindeling kies je \textbf{Begeleid - benut gehele schijf en gebruik 
 \includegraphics[width=0.45\textwidth]{schijven-indelen-scherm}
 \includegraphics[width=0.45\textwidth]{schijf-uitkiezen-scherm}
 \caption{Kies hier de optie met encryptie.}
-\label{fig:ischijven-indelen}
+\label{fig:schijven-indelen}
 \end{figure}
 
 
@@ -154,6 +154,63 @@ Je moet nu bevestigen dat dit een zwakke wachtwoordzin is.
 Het partitie schema wordt nog eenmaal aan je getoond (figuur ~\ref{fig:schijven-overzicht}) met de mogelijkheid om wijzingen aan te brengen. Dat doe je niet, maar gaat verder.
 
 Daarna wordt het nogmaals ter bevestiging getoond, opdat je het nog \'{e}\'{e}n keer kunt controleren. Je bevestigt de voorgestelde keuze.
+
+
+\subsection{Pakketbeheer}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{pakketbeheer-landkeuze-scherm}
+\includegraphics[width=0.45\textwidth]{pakketbeheer-mirror-scherm}
+\caption{Kies \textbf{Nederlands} als land van de Debian-archief-spiegelserver en als spiegelserver \textbf{ftp.nluug.nl}.}
+\label{fig:pakketten}
+\end{figure}
+
+Zoals je in figuur ~\ref{fig:pakketten} ziet moet je als land voor je Debian mirror \textbf{Nederland} kiezen en in het scherm daarop volgend kies je \textbf{ftp.nluug.nl}. 
+
+
+Op de vraag die daarop volgt (figuur ~\ref{fig:httpproxy}), waar je een HTTP-proxy moet kiezen druk je alleen \textsc{enter}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{pakketbeheer-proxy-scherm}
+\caption{Hier laat je het invul veld leeg en drukt alleen op \textsc{enter}.}
+\label{fig:httpproxy}
+\end{figure}
+
+Zoals in figuur ~\ref{fig:popcon} te zien is willen wij meedoen aan de populariteits competitie. Hiermee laten wij aan de vrijwilligers van Debian weten welke programma eindgebruikers belangrijk vinden, opdat zij hun prioriteiten goed kunnen stellen.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{populariteits-contest-scherm}
+\caption{Je selecteert hier \textbf{ja}.}
+\label{fig:popcon}
+\end{figure}
+
+\subsection{Software selectie}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{software-selectie-scherm}
+\label{fig:software-selectie-scherm}
+\end{figure}
+
+Nu volgt er een scherm (figuur ~\ref{fig:software-selectie-scherm}) over de te installeren programma's. Omdat wij een aangepaste installatie doen, mag je hier alleen \textbf{Standaard systeemhulpmiddelen} aangevinkt laten. Je gaat met de pijltjestoetsen omhoog naar \textbf{Debian desktop environment} en vinkt deze uit met de spatiebalk. Dan navigeer je met \textsc{tab} naar \textbf{OK} en drukt op \textsc{enter}.
+
+\subsection{Bootloader}
+
+Je gaat mee in het voorstel van figuur ~\ref{fig:grub} om GRUB in het masterboot record op te installeren.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{grub-installatie-scherm}
+\includegraphics[width=0.45\textwidth]{installatie-afronden-scherm}
+\caption{Je laat GRUB in het masterboot record installeren en je rondt de Installatie af.}
+\label{fig:grub}
+\end{figure}
+
+\section{Debian Amsterdam specifieke Installatie}
 
 \begin{lstlisting}[language=bash]
 $lsof -i :80
