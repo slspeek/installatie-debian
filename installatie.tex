@@ -8,6 +8,8 @@
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{float}
+\usepackage{hyperref}
+
 
 
 \begin{document}
@@ -231,12 +233,102 @@ Nu verschijnt het tekstlogin scherm van Linux. Dit noemen we een \textit{virtual
 \label{fig:loginprompt}
 \end{figure}
 
+\subsection{Installatie van gekozen pakketten}
+
 Nu zie je in het scherm een \textbf{\#}, dit betekent dat je bent aangemeld als beheerder.
-Nu gaan wij onze Debian Amsterdam scripts ophalen met het volgende commando:
+Zoals in figuur ~\ref{fig:bootstrap-commando} alvast te zien is, gaan wij onze Debian Amsterdam scripts ophalen met het volgende commando:
+
+\begin{lstlisting}[language=bash]
+wget --no-check-certificate -q -O- goo.gl/WHL7kR|sh
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{bootstrap-commando-scherm}
+\caption{Het \texttt{wget} commando om het aangepaste installatie programma op te halen.}
+\label{fig:bootstrap-commando}
+\end{figure}
+
+Het volgende commando dat wij geven zal een groot gedeelte van de installatie verder uitvoeren, helaas moet je er wel even bijblijven omdat er een paar vragen worden gesteld.
+
+\begin{lstlisting}[language=bash]
+install-debian.sh
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{install-debian-scherm}
+\caption{We roepen hier het hoofdscript aan met \texttt{install-debian.sh}}
+\label{fig:bootstrap-commando}
+\end{figure}
+
+De vraag die wordt gesteld is over het wachtwoord en volledige naam van de nieuwe gebruiker \textbf{tux}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{tux-wachtwoord-scherm}
+\includegraphics[width=0.45\textwidth]{tux-volledige-naam-scherm}
+\caption{Hier geef je als wachtwoord \textbf{tux}, gevolgd door \textsc{enter}. Dit moet je nog een keer doen en dan bij \textbf{Volledige naam []:} moet je \textbf{Tux} invullen. Daarna druk je op \textsc{enter} tot het script verder loopt.}
+\label{fig:tuxinfo}
+\end{figure}
+
+Dan is het tijd om de extra pakketten te installeren met:
+\begin{lstlisting}[language=bash]
+install-nice-to-have.sh
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{install-nice-to-have-scherm}
+\caption{Het commando voor de extra pakketten.}
+\label{fig:nicetohave}
+\end{figure}
+
+\subsection{Geluid configuratie}
+
+Om het geluidssysteem te initialiseren geeft je het volgende commando:
+
+\begin{lstlisting}[language=bash]
+alsactl init
+\end{lstlisting}
+
+Nu ga je het geluid testen met het volgende commando, wat je kunt (en moet) onderbreken met \textsc{Control-C}:
+
+\begin{lstlisting}[language=bash]
+speakertest
+\end{lstlisting}
+
+Mocht het dan nog niet werken controleer dan de volumes met:
+
+\begin{lstlisting}[language=bash]
+alsamixer
+\end{lstlisting}
+
+en probeer \texttt{speakertest} opnieuw.
+
+
+\subsection{Graphische configuratie}
+
+We kijken eerst of het al werkt met het commando:
+
+\begin{lstlisting}[language=bash]
+/etc/init.d/lightdm restart
+\end{lstlisting}
+
+Indien je een grapische omgeving ziet ben je klaar. Mocht dat niet zo zijn gebruik dan \textsc{Alt-Control-F2} om je weer als \textbf{root} te kunnen aanmelden en geef dan het volgende commando:
 
 
 \begin{lstlisting}[language=bash]
-wget --no-check-certificate -q -O- goo.gl/WHL7kR | sh
+xconfig.sh
 \end{lstlisting}
+
+\subsubsection{Nvida configuratie}
+
+Kijk met 
+\begin{lstlisting}[language=bash]
+lspci | grep -i vga
+\end{lstlisting}
+
+of er een ondersteunde Nvidia kaart in de computer zit. Dit doe je door het model op te zoeken in \textit{supported devices} op de pagina \url{https://wiki.debian.org/NvidiaGraphicsDrivers}. Dan weet je welke van \texttt{nvidiaXXX.sh} je moet aanroepen.
 
 \end{document}
