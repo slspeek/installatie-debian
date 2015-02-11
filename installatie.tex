@@ -41,6 +41,13 @@ Brandt dit op een CDROM, dit zullen wij de installatie CDROM noemen.
 \section{Installatie basissysteem}
 Wij gaan nu met de debian installer een simpel basissysteem installeren. Dit begint met het instellen van gegevens over onze plek op aarde en de taal die wij wensen te gebruiken met het nieuwe systeem.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{bootmenu}
+\caption{Je kiest hier de eerste optie \textbf{Install} met \textsc{enter}, om de installatie te beginnen. }
+\label{fig:taal-keuze-scherm}
+\end{figure}
+
 Boot van de installatie CDROM. Je komt dan in een menu.
 Je accepteert de eerste optie \textbf{Install} met \textsc{enter}.
 
@@ -112,6 +119,7 @@ Als wachtwoord vul je \textbf{tux} in. Dit moet nog een keer worden bevestigd.
 
 \subsection{Schijfindeling}
 Bij de schijfindeling kies je \textbf{Begeleid - benut gehele schijf en gebruik LVM met encryptie}, zoals in figuur ~\ref{fig:schijven-indelen}.
+Nu kies je de schijf die moet worden ingedeeld; dit zal meestal geen keuze opleveren, omdat de meeste machines maar \'{e}\'{e}n schijf hebben.
 
 \begin{figure}[H]
 \centering
@@ -122,12 +130,25 @@ Bij de schijfindeling kies je \textbf{Begeleid - benut gehele schijf en gebruik 
 \end{figure}
 
 
+Nu moet je kiezen hoe de schijf gaat worden opgedeeld (figuur ~\ref{fig:aparte-partities}); je kiest de onderste optie \textbf{Afzondelijke /home, /usr, /var en /tmp partitie}.
 
-Nu moet je kiezen hoe de schijf gaat worden opgedeeld; je kiest de onderste optie \textbf{Afzondelijke /home, /usr, /var en /tmp partitie}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{schijf-indelen-afzonderlijke-partities}
+\includegraphics[width=0.45\textwidth]{lvm-instellen-scherm}
+\caption{In de eerste scherm kiest je de onderste optie.}
+\label{fig:aparte-partities}
+\end{figure}
 
-Nu kies je de schijf die moet worden ingedeeld; dit zal meestal geen keuze opleveren, omdat de meeste machines maar \'{e}\'{e}n schijf hebben.
 
-Nadat je dit bevestigd hebt, gaat de installer de gehele disk wissen, dat kan even duren (in de orde van uren). Je mag dit annuleren.
+Nadat je dit bevestigd hebt, gaat de installer de gehele disk wissen (figuur ~\ref{fig:schijf-wissen}), dat kan even duren (in de orde van uren). Je mag dit annuleren.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{schijven-wissen-scherm}
+\caption{Je mag dit annuleren.}
+\label{fig:schijf-wissen}
+\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -207,12 +228,18 @@ Je gaat mee in het voorstel van figuur ~\ref{fig:grub} om GRUB in het masterboot
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.45\textwidth]{grub-installatie-scherm}
-\includegraphics[width=0.45\textwidth]{installatie-afronden-scherm}
-\caption{Je laat GRUB in het masterboot record installeren en je rondt de installatie af.}
+\caption{Je laat GRUB in het masterboot record installeren}
 \label{fig:grub}
 \end{figure}
 
-%TODO iets meer over afronding, plaatje los halen
+Nu rond je de installatie af zoals in figuur ~\ref{fig:afronden}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{installatie-afronden-scherm}
+\caption{Je leest de instructies, voert ze uit en kiest \textbf{Volgende}.}
+\label{fig:afronden}
+\end{figure}
 
 \section{Debian Amsterdam specifieke installatie}
 
