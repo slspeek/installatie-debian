@@ -4,6 +4,7 @@
 *.gz
 *~
 *.swap
+*.swp
 *.dvi
 *.htoc
 *.html
