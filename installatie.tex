@@ -358,10 +358,31 @@ Kijk met
 \begin{lstlisting}[language=bash]
 lspci | grep -i vga
 \end{lstlisting}
+of er een ondersteunde Nvidia kaart in de computer zit. Dit doe je door het model op te zoeken in \textit{supported devices} op de pagina \href{https://wiki.debian.org/NvidiaGraphicsDrivers}{Debian Wiki}. Dan weet je welke van de  \texttt{nvidiaXXX.sh} je moet aanroepen.
 
-of er een ondersteunde Nvidia kaart in de computer zit. Dit doe je door het model op te zoeken in \textit{supported devices} op de pagina \url{https://wiki.debian.org/NvidiaGraphicsDrivers}. Dan weet je welke van de  \texttt{nvidiaXXX.sh} je moet aanroepen.
+\subsection{Firmware installeren}
+\label{ssec:Firmware}
+Kijk met 
+\begin{lstlisting}[language=bash]
+dmesg | grep -i firmware | grep -i 'failed\|missing'
+\end{lstlisting}
+of er firmware ontbreekt op computer.
+Indien dit commando uitvoer heeft mist de computer firmware. In de regel wordt de bestandsnaam van de ontbrekende firmware genoemd. Gebruik deze naam om met \texttt{apt-file search} het pakket op te zoeken dat dit bestand levert. Daarna installeer je dat pakket met \texttt{apt-get install}.
 
-%TODO firmware instructies
-%TODO wireless instructies
+\subsection{Wireless configuratie}
+Kijk met 
+\begin{lstlisting}[language=bash]
+iwconfig
+\end{lstlisting}
+of er draadloze interfaces zijn. Als deze er niet zijn ben je klaar. 
+
+Maar is, zeg \texttt{wlan0}, een draadloze interface. Dan zet je de interface aan met 
+\begin{lstlisting}[language=bash]
+ifconfig wlan0 up
+\end{lstlisting}
+Als dit zonder uitvoer retourneert, heeft de draadloze interface geen firmware nodig.
+
+Maar als er wel uitvoer is moet je de stappen uit ~\ref{ssec:Firmware} nogmaals uitvoeren.
+
 %TODO APT-survival guide
 \end{document}
