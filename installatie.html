@@ -1,0 +1,1166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="nl" > 
+<head> <title>GNUAmsterdam Debian Wheezy Installatie</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html --> 
+<meta name="src" content="installatie.tex"> 
+<meta name="date" content="2015-03-03 14:00:00"> 
+<link rel="stylesheet" type="text/css" href="installatie.css"> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+
+<h2 class="titleHead">GNUAmsterdam Debian Wheezy Installatie</h2>
+<div class="author" ><span 
+class="cmr-12x-x-120">Steven L. Speek</span></div><br />
+<div class="date" ><span 
+class="cmr-12x-x-120">3</span><span 
+class="cmr-12x-x-120">&#x00A0;maart 2015</span></div>
+   </div>
+<div class="center" 
+>
+<!--l. 22--><p class="noindent" >
+<!--l. 22--><p class="noindent" ><span 
+class="cmbx-10x-x-109">Samenvatting</span></div>
+      <!--l. 22--><p class="indent" >    <span 
+class="cmr-10x-x-109">Nederlandse handleiding voor een Debian desktop installatie.</span>
+         <h3 class="sectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">1   </span></span> <a 
+ id="x1-10001"></a><span 
+class="cmr-10x-x-109">Algemene aanwijzingen</span></h3>
+      <!--l. 26--><p class="noindent" ><span 
+class="cmti-10x-x-109">Zeer belangrijk: </span><span 
+class="cmr-10x-x-109">Iedere vraag die door het installatie programma aan jou wordt gesteld en waarover</span>
+      <span 
+class="cmr-10x-x-109">hieronder niets staat vermeldt beantwoordt je met de </span><span 
+class="cmcsc-10x-x-109"><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span><span 
+class="cmr-10x-x-109">-toets.</span>
+      <!--l. 28--><p class="indent" >     <span 
+class="cmr-10x-x-109">Als de debian installer naar een nieuw scherm gaat, begint er in deze handleiding een nieuwe</span>
+      <span 
+class="cmr-10x-x-109">paragraaf.</span>
+      <!--l. 31--><p class="noindent" >
+         <h3 class="sectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">2   </span></span> <a 
+ id="x1-20002"></a><span 
+class="cmr-10x-x-109">Floppy station onklaar maken</span></h3>
+      <!--l. 32--><p class="noindent" ><span 
+class="cmr-10x-x-109">Floppy stations zijn een erfenis uit het verleden. Schakel de floppy ondersteuning in de BIOS uit. En maak</span>
+      <span 
+class="cmr-10x-x-109">de kabels verbonden met het floppy-station los.</span>
+      <!--l. 35--><p class="noindent" >
+         <h3 class="sectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">3   </span></span> <a 
+ id="x1-30003"></a><span 
+class="cmr-10x-x-109">CDROM ophalen</span></h3>
+      <!--l. 36--><p class="noindent" ><span 
+class="cmr-10x-x-109">Op </span><a 
+href="http://www.debian.org/distrib" ><span 
+class="cmr-10x-x-109">Debian website</span></a> <span 
+class="cmr-10x-x-109">kies je een klein installatie-image voor jouw architectuur (meestal amd64, soms nog</span>
+      <span 
+class="cmr-10x-x-109">i686). Brandt dit op een CDROM, dit zullen wij de installatie CDROM noemen.</span>
+      <!--l. 40--><p class="noindent" >
+         <h3 class="sectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">4   </span></span> <a 
+ id="x1-40004"></a><span 
+class="cmr-10x-x-109">Installatie basissysteem</span></h3>
+      <!--l. 41--><p class="noindent" ><span 
+class="cmr-10x-x-109">Wij gaan nu met de debian installer een simpel basissysteem installeren. Dit begint met het instellen van</span>
+      <span 
+class="cmr-10x-x-109">gegevens over onze plek op aarde en de taal die wij wensen te gebruiken met het nieuwe</span>
+      <span 
+class="cmr-10x-x-109">systeem.</span>
+      <!--l. 43--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-4001r1"></a> <img 
+src="./images/bootmenu.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;1: </span><span  
+class="content">Je kiest hier de eerste optie <span 
+class="cmbx-12">Install </span>met <span 
+class="cmcsc-10x-x-120"><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span>, om de installatie te beginnen. </span></div><!--tex4ht:label?: x1-4001r1 -->
+                                                                                                    
+                                                                                                    
+      <!--l. 48--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 50--><p class="indent" >    <span 
+class="cmr-10x-x-109">Boot van de installatie CDROM. Je komt dan in een menu. Je accepteert de eerste optie </span><span 
+class="cmbx-10x-x-109">Install </span><span 
+class="cmr-10x-x-109">met</span>
+      <span 
+class="cmcsc-10x-x-109"><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span><span 
+class="cmr-10x-x-109">.</span>
+      <!--l. 54--><p class="noindent" >
+         <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">4.1   </span></span> <a 
+ id="x1-50004.1"></a><span 
+class="cmr-10x-x-109">Localisatie instellingen</span></h4>
+      <!--l. 55--><p class="noindent" ><hr class="figure"><div class="figure" 
+><a 
+ id="x1-5001r2"></a> <img 
+src="./images/taal-keuze-scherm.png" alt="PIC"  
+> <img 
+src="./images/lokatie-keuze-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;2: </span><span  
+class="content">Taal en lokatie instellingen.</span></div><!--tex4ht:label?: x1-5001r2 -->
+      <!--l. 61--><p class="noindent" ></div><hr class="endfigure">
+      <!--l. 63--><p class="indent" >    <span 
+class="cmr-10x-x-109">Op het volgende twee schermen, zie figuur </span><a 
+href="#x1-5001r2"><span 
+class="cmr-10x-x-109">2</span><!--tex4ht:ref: fig:taal-keuze-scherm --></a><span 
+class="cmr-10x-x-109">, moet je de taal kiezen; kies </span><span 
+class="cmbx-10x-x-109">Dutch </span><span 
+class="cmr-10x-x-109">(pijltje omhoog en dan</span>
+      <span 
+class="cmcsc-10x-x-109"><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span><span 
+class="cmr-10x-x-109">). In de scherm daarna, selecteer je </span><span 
+class="cmbx-10x-x-109">Nederland </span><span 
+class="cmr-10x-x-109">als land en drukt op </span><span 
+class="cmcsc-10x-x-109"><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span><span 
+class="cmr-10x-x-109">. Vanaf gaan we niet</span>
+      <span 
+class="cmr-10x-x-109">meer zeggen dat je op </span><span 
+class="cmcsc-10x-x-109"><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span> </span><span 
+class="cmr-10x-x-109">moet drukken.</span>
+      <!--l. 65--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-5002r3"></a> <img 
+src="./images/toetsenbord-indeling-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;3: </span><span  
+class="content">Kies hier <span 
+class="cmbx-12">American English</span>.</span></div><!--tex4ht:label?: x1-5002r3 -->
+      <!--l. 70--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 72--><p class="indent" >    <span 
+class="cmr-10x-x-109">Als toetsenbordindeling kies je </span><span 
+class="cmbx-10x-x-109">American English </span><span 
+class="cmr-10x-x-109">(zie figuur </span><a 
+href="#x1-5002r3"><span 
+class="cmr-10x-x-109">3</span><!--tex4ht:ref: fig:toetsenbord-indeling-scherm --></a><span 
+class="cmr-10x-x-109">).</span>
+      <!--l. 75--><p class="noindent" >
+         <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">4.2   </span></span> <a 
+ id="x1-60004.2"></a><span 
+class="cmr-10x-x-109">Netwerk instellingen</span></h4>
+      <!--l. 76--><p class="noindent" ><span 
+class="cmr-10x-x-109">Je wacht tot de debian installer de aanvullende installatie modules heeft geladen. Het kan zijn dat er</span>
+      <span 
+class="cmr-10x-x-109">vragen komen over ontbrekende firmware. Die moet je allen met </span><span 
+class="cmbx-10x-x-109">nee </span><span 
+class="cmr-10x-x-109">beantwoorden.</span>
+      <!--l. 78--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-6001r4"></a> <img 
+src="./images/computernaam-scherm.png" alt="PIC"  
+> <img 
+src="./images/domeinnaam-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;4: </span><span  
+class="content">Hostnaam en domeinnaam schermen.</span></div><!--tex4ht:label?: x1-6001r4 -->
+      <!--l. 84--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 86--><p class="indent" >    <span 
+class="cmr-10x-x-109">Vul </span><span 
+class="cmbx-10x-x-109">debian </span><span 
+class="cmr-10x-x-109">in als computernaam (figuur </span><a 
+href="#x1-6001r4"><span 
+class="cmr-10x-x-109">4</span><!--tex4ht:ref: fig:computernaam-scherm --></a><span 
+class="cmr-10x-x-109">).</span>
+      <!--l. 88--><p class="indent" >     <span 
+class="cmr-10x-x-109">En vul </span><span 
+class="cmbx-10x-x-109">lan </span><span 
+class="cmr-10x-x-109">in bij domeinnaam.</span>
+      <!--l. 91--><p class="noindent" >
+         <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">4.3   </span></span> <a 
+ id="x1-70004.3"></a><span 
+class="cmr-10x-x-109">Gebruikers en wachtwoorden</span></h4>
+      <!--l. 93--><p class="noindent" ><hr class="figure"><div class="figure" 
+><a 
+ id="x1-7001r5"></a> <img 
+src="./images/root-wachtwoord-scherm.png" alt="PIC"  
+> <img 
+src="./images/root-wachtwoord-bevestiging.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;5: </span><span  
+class="content">Vul hier tweemaal <span 
+class="cmbx-12">root </span>in.</span></div><!--tex4ht:label?: x1-7001r5 -->
+      <!--l. 99--><p class="noindent" ></div><hr class="endfigure">
+      <!--l. 101--><p class="indent" >    <span 
+class="cmr-10x-x-109">Nu moeten het root wachtwoord worden gezet, zie figuur </span><a 
+href="#x1-7001r5"><span 
+class="cmr-10x-x-109">5</span><!--tex4ht:ref: fig:root-wachtwoord-scherm --></a><span 
+class="cmr-10x-x-109">. Vul als root wachtwoord in </span><span 
+class="cmbx-10x-x-109">root</span><span 
+class="cmr-10x-x-109">, en doe</span>
+      <span 
+class="cmr-10x-x-109">dit nogmaals ter controle.</span>
+      <!--l. 104--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-7002r6"></a> <img 
+src="./images/nieuwe-gebruiker-naam.png" alt="PIC"  
+> <img 
+src="./images/nieuwe-gebruiker-echte-naam.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;6: </span><span  
+class="content">Toevoegen van een nieuwe gebruiker.</span></div><!--tex4ht:label?: x1-7002r6 -->
+      <!--l. 110--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 112--><p class="indent" >    <span 
+class="cmr-10x-x-109">Je vult </span><span 
+class="cmbx-10x-x-109">Tux </span><span 
+class="cmr-10x-x-109">in als volledige naam van de nieuwe aardse gebruiker (figuur </span><a 
+href="#x1-7002r6"><span 
+class="cmr-10x-x-109">6</span><!--tex4ht:ref: fig:nieuwe-gebruiker --></a><span 
+class="cmr-10x-x-109">). De debian installer</span>
+      <span 
+class="cmr-10x-x-109">suggereert dan </span><span 
+class="cmbx-10x-x-109">tux </span><span 
+class="cmr-10x-x-109">als gebruikersnaam. Dat accepteer je met </span><span 
+class="cmcsc-10x-x-109"><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span><span 
+class="cmr-10x-x-109">.</span>
+      <!--l. 116--><p class="indent" >     <span 
+class="cmr-10x-x-109">Als wachtwoord vul je </span><span 
+class="cmbx-10x-x-109">tux </span><span 
+class="cmr-10x-x-109">in. Dit moet nog een keer worden bevestigd.</span>
+      <!--l. 119--><p class="noindent" >
+         <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">4.4   </span></span> <a 
+ id="x1-80004.4"></a><span 
+class="cmr-10x-x-109">Schijfindeling</span></h4>
+      <!--l. 120--><p class="noindent" ><span 
+class="cmr-10x-x-109">Bij de schijfindeling kies je </span><span 
+class="cmbx-10x-x-109">Begeleid - benut gehele schijf en gebruik LVM met encryptie</span><span 
+class="cmr-10x-x-109">, zoals in</span>
+      <span 
+class="cmr-10x-x-109">figuur </span><a 
+href="#x1-8001r7"><span 
+class="cmr-10x-x-109">7</span><!--tex4ht:ref: fig:schijven-indelen --></a><span 
+class="cmr-10x-x-109">. Nu kies je de schijf die moet worden ingedeeld; dit zal meestal geen keuze opleveren, omdat de</span>
+      <span 
+class="cmr-10x-x-109">meeste machines maar </span><span 
+class="cmr-10x-x-109">é</span><span 
+class="cmr-10x-x-109">én schijf hebben.</span>
+      <!--l. 123--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-8001r7"></a> <img 
+src="./images/schijven-indelen-scherm.png" alt="PIC"  
+> <img 
+src="./images/schijf-uitkiezen-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;7: </span><span  
+class="content">Kies hier de optie met encryptie.</span></div><!--tex4ht:label?: x1-8001r7 -->
+      <!--l. 129--><p class="indent" >    </div><hr class="endfigure">
+                                                                                                    
+                                                                                                    
+      <!--l. 132--><p class="indent" >    <span 
+class="cmr-10x-x-109">Nu moet je kiezen hoe de schijf gaat worden opgedeeld (figuur </span><a 
+href="#x1-8002r8"><span 
+class="cmr-10x-x-109">8</span><!--tex4ht:ref: fig:aparte-partities --></a><span 
+class="cmr-10x-x-109">); je kiest de onderste optie</span>
+      <span 
+class="cmbx-10x-x-109">Afzondelijke /home, /usr, /var en /tmp partitie</span><span 
+class="cmr-10x-x-109">.</span>
+      <!--l. 134--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-8002r8"></a> <img 
+src="./images/schijf-indelen-afzonderlijke-partities.png" alt="PIC"  
+> <img 
+src="./images/lvm-instellen-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;8: </span><span  
+class="content">In de eerste scherm kiest je de onderste optie.</span></div><!--tex4ht:label?: x1-8002r8 -->
+      <!--l. 140--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 143--><p class="indent" >    <span 
+class="cmr-10x-x-109">Nadat je dit bevestigd hebt, gaat de installer de gehele disk wissen (figuur </span><a 
+href="#x1-8003r9"><span 
+class="cmr-10x-x-109">9</span><!--tex4ht:ref: fig:schijf-wissen --></a><span 
+class="cmr-10x-x-109">), dat kan even duren (in</span>
+      <span 
+class="cmr-10x-x-109">de orde van uren). Je mag dit annuleren.</span>
+      <!--l. 145--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-8003r9"></a> <img 
+src="./images/schijven-wissen-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;9: </span><span  
+class="content">Je mag dit annuleren.</span></div><!--tex4ht:label?: x1-8003r9 -->
+      <!--l. 150--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 152--><p class="indent" >    <hr class="figure"><div class="figure" 
+><a 
+ id="x1-8004r10"></a> <img 
+src="./images/schijven-wachtwoordzin-scherm.png" alt="PIC"  
+> <img 
+src="./images/schijven-wachtwoordzin-bevestiging.png" alt="PIC"  
+> <img 
+src="./images/schijven-zwakke-wachtwoordzin.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;10: </span><span  
+class="content">Vul hier <span 
+class="cmbx-12">gnu </span>in als wachtwoordzin.</span></div><!--tex4ht:label?: x1-8004r10 -->
+      <!--l. 159--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 161--><p class="indent" >    <span 
+class="cmr-10x-x-109">Zoals in figuur </span><a 
+href="#x1-8004r10"><span 
+class="cmr-10x-x-109">10</span><!--tex4ht:ref: fig:wachtwoordzin-scherm --></a> <span 
+class="cmr-10x-x-109">wordt er om een wachtwoordzin gevraagd, je vult </span><span 
+class="cmbx-10x-x-109">gnu </span><span 
+class="cmr-10x-x-109">in.</span>
+      <!--l. 163--><p class="indent" >     <span 
+class="cmr-10x-x-109">Dit moet je nogmaals te controle doen.</span>
+      <!--l. 165--><p class="indent" >     <span 
+class="cmr-10x-x-109">Je moet nu bevestigen dat dit een zwakke wachtwoordzin is.</span>
+      <!--l. 167--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-8005r11"></a> <img 
+src="./images/schijven-overzicht-scherm.png" alt="PIC"  
+> <img 
+src="./images/schijven-tweede-overzicht-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;11: </span><span  
+class="content">Bevestig tweemaal de gemaakte schijfindeling.</span></div><!--tex4ht:label?: x1-8005r11 -->
+      <!--l. 173--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 176--><p class="indent" >    <span 
+class="cmr-10x-x-109">Het partitie schema wordt nog eenmaal aan je getoond (figuur </span><a 
+href="#x1-8005r11"><span 
+class="cmr-10x-x-109">11</span><!--tex4ht:ref: fig:schijven-overzicht --></a><span 
+class="cmr-10x-x-109">) met de mogelijkheid om wijzingen</span>
+      <span 
+class="cmr-10x-x-109">aan te brengen. Dat doe je niet, maar gaat verder.</span>
+      <!--l. 178--><p class="indent" >     <span 
+class="cmr-10x-x-109">Daarna wordt het nogmaals ter bevestiging getoond, opdat je het nog </span><span 
+class="cmr-10x-x-109">é</span><span 
+class="cmr-10x-x-109">én keer kunt controleren. Je</span>
+      <span 
+class="cmr-10x-x-109">bevestigt de voorgestelde keuze.</span>
+      <!--l. 181--><p class="noindent" >
+         <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">4.5   </span></span> <a 
+ id="x1-90004.5"></a><span 
+class="cmr-10x-x-109">Pakketbeheer</span></h4>
+      <!--l. 183--><p class="noindent" ><hr class="figure"><div class="figure" 
+><a 
+ id="x1-9001r12"></a> <img 
+src="./images/pakketbeheer-landkeuze-scherm.png" alt="PIC"  
+> <img 
+src="./images/pakketbeheer-mirror-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;12:  </span><span  
+class="content">Kies  <span 
+class="cmbx-12">Nederlands  </span>als  land  van  de  Debian-archief-spiegelserver  en  als  spiegelserver
+<span 
+class="cmbx-12">ftp.nluug.nl</span>.</span></div><!--tex4ht:label?: x1-9001r12 -->
+      <!--l. 189--><p class="noindent" ></div><hr class="endfigure">
+      <!--l. 191--><p class="indent" >    <span 
+class="cmr-10x-x-109">Zoals je in figuur </span><a 
+href="#x1-9001r12"><span 
+class="cmr-10x-x-109">12</span><!--tex4ht:ref: fig:pakketten --></a> <span 
+class="cmr-10x-x-109">ziet moet je als land voor je Debian mirror </span><span 
+class="cmbx-10x-x-109">Nederland </span><span 
+class="cmr-10x-x-109">kiezen en in het scherm</span>
+      <span 
+class="cmr-10x-x-109">daarop volgend kies je </span><span 
+class="cmbx-10x-x-109">ftp.nluug.nl</span><span 
+class="cmr-10x-x-109">.</span>
+      <!--l. 194--><p class="indent" >     <span 
+class="cmr-10x-x-109">Op de vraag die daarop volgt (figuur </span><a 
+href="#x1-9002r13"><span 
+class="cmr-10x-x-109">13</span><!--tex4ht:ref: fig:httpproxy --></a><span 
+class="cmr-10x-x-109">), waar je een HTTP-proxy moet kiezen druk je alleen</span>
+      <span 
+class="cmcsc-10x-x-109"><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span><span 
+class="cmr-10x-x-109">.</span>
+      <!--l. 196--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-9002r13"></a> <img 
+src="./images/pakketbeheer-proxy-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;13: </span><span  
+class="content">Hier laat je het invul veld leeg en drukt alleen op <span 
+class="cmcsc-10x-x-120"><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span>.</span></div><!--tex4ht:label?: x1-9002r13 -->
+      <!--l. 201--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 203--><p class="indent" >    <span 
+class="cmr-10x-x-109">Zoals in figuur </span><a 
+href="#x1-9003r14"><span 
+class="cmr-10x-x-109">14</span><!--tex4ht:ref: fig:popcon --></a> <span 
+class="cmr-10x-x-109">te zien is willen wij meedoen aan de populariteits competitie. Hiermee laten wij aan</span>
+      <span 
+class="cmr-10x-x-109">de vrijwilligers van Debian weten welke programma eindgebruikers belangrijk vinden, opdat zij hun</span>
+      <span 
+class="cmr-10x-x-109">prioriteiten goed kunnen stellen.</span>
+      <!--l. 205--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-9003r14"></a> <img 
+src="./images/populariteits-contest-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;14: </span><span  
+class="content">Je selecteert hier <span 
+class="cmbx-12">ja</span>.</span></div><!--tex4ht:label?: x1-9003r14 -->
+      <!--l. 210--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 212--><p class="noindent" >
+         <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">4.6   </span></span> <a 
+ id="x1-100004.6"></a><span 
+class="cmr-10x-x-109">Software selectie</span></h4>
+      <!--l. 214--><p class="noindent" ><hr class="figure"><div class="figure" 
+> <img 
+src="./images/software-selectie-scherm.png" alt="PIC"  
+>
+      </div><hr class="endfigure">
+      <!--l. 220--><p class="noindent" ><span 
+class="cmr-10x-x-109">Nu volgt er een scherm (figuur </span><a 
+href="#x1-100004.6"><span 
+class="cmr-10x-x-109">4.6</span><!--tex4ht:ref: fig:software-selectie-scherm --></a><span 
+class="cmr-10x-x-109">) over de te installeren programma&#8217;s. Omdat wij een aangepaste</span>
+      <span 
+class="cmr-10x-x-109">installatie doen, mag je hier alleen </span><span 
+class="cmbx-10x-x-109">Standaard systeemhulpmiddelen </span><span 
+class="cmr-10x-x-109">aangevinkt laten. Je gaat met de</span>
+      <span 
+class="cmr-10x-x-109">pijltjestoetsen omhoog naar </span><span 
+class="cmbx-10x-x-109">Debian desktop environment </span><span 
+class="cmr-10x-x-109">en vinkt deze uit met de spatiebalk. Dan</span>
+      <span 
+class="cmr-10x-x-109">navigeer je met </span><span 
+class="cmcsc-10x-x-109"><span 
+class="small-caps">t</span><span 
+class="small-caps">a</span><span 
+class="small-caps">b</span> </span><span 
+class="cmr-10x-x-109">naar </span><span 
+class="cmbx-10x-x-109">Volgende </span><span 
+class="cmr-10x-x-109">en drukt op </span><span 
+class="cmcsc-10x-x-109"><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span><span 
+class="cmr-10x-x-109">.</span>
+                                                                                                    
+                                                                                                    
+      <!--l. 222--><p class="noindent" >
+         <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">4.7   </span></span> <a 
+ id="x1-110004.7"></a><span 
+class="cmr-10x-x-109">Bootloader</span></h4>
+      <!--l. 224--><p class="noindent" ><span 
+class="cmr-10x-x-109">Je gaat mee in het voorstel van figuur </span><a 
+href="#x1-11001r15"><span 
+class="cmr-10x-x-109">15</span><!--tex4ht:ref: fig:grub --></a> <span 
+class="cmr-10x-x-109">om GRUB in het masterboot record op te installeren.</span>
+      <!--l. 227--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-11001r15"></a> <img 
+src="./images/grub-installatie-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;15: </span><span  
+class="content">Je laat GRUB in het masterboot record installeren</span></div><!--tex4ht:label?: x1-11001r15 -->
+      <!--l. 232--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 234--><p class="indent" >    <span 
+class="cmr-10x-x-109">Nu rond je de installatie af zoals in figuur </span><a 
+href="#x1-11002r16"><span 
+class="cmr-10x-x-109">16</span><!--tex4ht:ref: fig:afronden --></a><span 
+class="cmr-10x-x-109">.</span>
+      <!--l. 236--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-11002r16"></a> <img 
+src="./images/installatie-afronden-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;16: </span><span  
+class="content">Je leest de instructies, voert ze uit en kiest <span 
+class="cmbx-12">Volgende</span>.</span></div><!--tex4ht:label?: x1-11002r16 -->
+      <!--l. 241--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 243--><p class="noindent" >
+         <h3 class="sectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">5   </span></span> <a 
+ id="x1-120005"></a><span 
+class="cmr-10x-x-109">Debian Amsterdam specifieke installatie</span></h3>
+      <!--l. 245--><p class="noindent" ><span 
+class="cmr-10x-x-109">Omdat wij de het systeem hebben laten versleutelen moeten we bij het opstarten een wachtwoordzin</span>
+      <span 
+class="cmr-10x-x-109">opgeven om verder te gaan (figuur </span><a 
+href="#x1-12001r17"><span 
+class="cmr-10x-x-109">17</span><!--tex4ht:ref: fig:diskwachtwoord --></a><span 
+class="cmr-10x-x-109">).</span>
+      <!--l. 247--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-12001r17"></a> <img 
+src="./images/diskwachtwoordzin-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;17: </span><span  
+class="content">Je typt hier <span 
+class="cmbx-12">gnu</span>, gevolgd door <span 
+class="cmcsc-10x-x-120"><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span>. Merk op dat de karakters niet op het scherm
+verschijnen, ook niet als sterretjes.</span></div><!--tex4ht:label?: x1-12001r17 -->
+      <!--l. 252--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 254--><p class="indent" >    <span 
+class="cmr-10x-x-109">Nu verschijnt het tekstlogin scherm van Linux. Dit noemen we een </span><span 
+class="cmti-10x-x-109">virtual terminal</span><span 
+class="cmr-10x-x-109">. Volg de</span>
+      <span 
+class="cmr-10x-x-109">aanwijzingen van figuur </span><a 
+href="#x1-12002r18"><span 
+class="cmr-10x-x-109">18</span><!--tex4ht:ref: fig:loginprompt --></a> <span 
+class="cmr-10x-x-109">op.</span>
+      <!--l. 256--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-12002r18"></a> <img 
+src="./images/loginprompt-scherm.png" alt="PIC"  
+> <img 
+src="./images/ingelogd-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;18: </span><span  
+class="content">Achter <span 
+class="cmbx-12">debian login: </span>type je <span 
+class="cmbx-12">root</span>, gevolgd door <span 
+class="cmcsc-10x-x-120"><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span>, dit is tevens het wachtwoord.
+Dus als <span 
+class="cmbx-12">Password: </span>verschijnt type je weer <span 
+class="cmbx-12">root</span>, gevolgd door <span 
+class="cmcsc-10x-x-120"><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span>.</span></div><!--tex4ht:label?: x1-12002r18 -->
+      <!--l. 262--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 264--><p class="noindent" >
+         <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">5.1   </span></span> <a 
+ id="x1-130005.1"></a><span 
+class="cmr-10x-x-109">Installatie van gekozen pakketten</span></h4>
+      <!--l. 266--><p class="noindent" ><span 
+class="cmr-10x-x-109">Nu zie je in het scherm een </span><span 
+class="cmbx-10x-x-109">#</span><span 
+class="cmr-10x-x-109">, dit betekent dat je bent aangemeld als beheerder. Zoals in figuur</span>
+      <a 
+href="#x1-13002r19"><span 
+class="cmr-10x-x-109">19</span><!--tex4ht:ref: fig:bootstrap-commando --></a> <span 
+class="cmr-10x-x-109">alvast te zien is, gaan wij onze Debian Amsterdam scripts ophalen met het volgende</span>
+      <span 
+class="cmr-10x-x-109">commando:</span>
+         <!--l. 269-->
+   <div class="lstlisting" id="listing-1"><span class="label"><a 
+ id="x1-13001r1"></a></span><span 
+class="cmr-10x-x-109">wget</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">no</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">check</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">certificate</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">q</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">O</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmr-10x-x-109">goo</span><span 
+class="cmr-10x-x-109">.</span><span 
+class="cmr-10x-x-109">gl</span><span 
+class="cmr-10x-x-109">/</span><span 
+class="cmr-10x-x-109">WHL7kR</span><span 
+class="cmsy-10x-x-109">|</span><span 
+class="cmr-10x-x-109">sh</span>
+   
+         </div>
+      <!--l. 272--><p class="indent" >     <span 
+class="cmr-10x-x-109">Ter verduidelijking de tekens: </span><span 
+class="cmtt-10x-x-109">-O- </span><span 
+class="cmr-10x-x-109">bestaan uit &#8217;min&#8217;, &#8217;hoofdletter O&#8217; en &#8217;min&#8217;.</span>
+      <!--l. 274--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-13002r19"></a> <img 
+src="./images/bootstrap-commando-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;19: </span><span  
+class="content">Het <span 
+class="cmtt-12">wget </span>commando om het aangepaste installatie programma op te halen.</span></div><!--tex4ht:label?: x1-13002r19 -->
+      <!--l. 279--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 281--><p class="indent" >    <span 
+class="cmr-10x-x-109">Het volgende commando dat wij geven zal een groot gedeelte van de installatie verder uitvoeren, helaas</span>
+      <span 
+class="cmr-10x-x-109">moet je er wel even bijblijven omdat er een paar vragen worden gesteld.</span>
+         <!--l. 283-->
+   <div class="lstlisting" id="listing-2"><span class="label"><a 
+ id="x1-13003r1"></a></span><span 
+class="cmr-10x-x-109">install</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">debian</span><span 
+class="cmr-10x-x-109">.</span><span 
+class="cmr-10x-x-109">sh</span>
+   
+         </div>
+      <!--l. 287--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-13004r20"></a> <img 
+src="./images/install-debian-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;20: </span><span  
+class="content">We roepen hier het hoofdscript aan met <span 
+class="cmtt-12">install-debian.sh</span></span></div><!--tex4ht:label?: x1-13004r20 -->
+      <!--l. 292--><p class="indent" >   </div><hr class="endfigure">
+      <!--l. 294--><p class="indent" >   <span 
+class="cmr-10x-x-109">De vraag die wordt gesteld is over het wachtwoord en volledige naam van de nieuwe gebruiker</span>
+      <span 
+class="cmbx-10x-x-109">tux</span><span 
+class="cmr-10x-x-109">.</span>
+      <!--l. 296--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-13005r21"></a> <img 
+src="./images/tux-wachtwoord-scherm.png" alt="PIC"  
+> <img 
+src="./images/tux-volledige-naam-scherm.png" alt="PIC"  
+>
+                                                                                                    
+                                                                                                    
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;21: </span><span  
+class="content">Hier geef je als wachtwoord <span 
+class="cmbx-12">tux</span>, gevolgd door <span 
+class="cmcsc-10x-x-120"><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span>. Dit moet je nog een keer doen en
+dan bij <span 
+class="cmbx-12">Volledige naam []: </span>moet je <span 
+class="cmbx-12">Tux </span>invullen. Daarna druk je op <span 
+class="cmcsc-10x-x-120"><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span> </span>tot het script verder
+loopt.</span></div><!--tex4ht:label?: x1-13005r21 -->
+      <!--l. 302--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 304--><p class="indent" >    <span 
+class="cmr-10x-x-109">Dan is het tijd om de extra pakketten te installeren met: </span><!--l. 305-->
+   <div class="lstlisting" id="listing-3"><span class="label"><a 
+ id="x1-13006r1"></a></span><span 
+class="cmr-10x-x-109">install</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmbx-10x-x-109">nice</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">to</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">have</span><span 
+class="cmr-10x-x-109">.</span><span 
+class="cmr-10x-x-109">sh</span>
+   
+         </div>
+      <!--l. 309--><p class="indent" >     <hr class="figure"><div class="figure" 
+><a 
+ id="x1-13007r22"></a> <img 
+src="./images/install-nice-to-have-scherm.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figuur&#x00A0;22: </span><span  
+class="content">Het commando voor de extra pakketten.</span></div><!--tex4ht:label?: x1-13007r22 -->
+      <!--l. 314--><p class="indent" >    </div><hr class="endfigure">
+      <!--l. 316--><p class="noindent" >
+         <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">5.2   </span></span> <a 
+ id="x1-140005.2"></a><span 
+class="cmr-10x-x-109">Geluid configuratie</span></h4>
+      <!--l. 318--><p class="noindent" ><span 
+class="cmr-10x-x-109">Om het geluidssysteem te initialiseren geeft je het volgende commando:</span>
+         <!--l. 320-->
+   <div class="lstlisting" id="listing-4"><span class="label"><a 
+ id="x1-14001r1"></a></span><span 
+class="cmr-10x-x-109">alsactl</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmr-10x-x-109">init</span>
+   
+         </div>
+      <!--l. 324--><p class="indent" >     <span 
+class="cmr-10x-x-109">Nu ga je het geluid testen met het volgende commando, wat je kunt (en moet) onderbreken met</span>
+      <span 
+class="cmcsc-10x-x-109">C<span 
+class="small-caps">o</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">r</span><span 
+class="small-caps">o</span><span 
+class="small-caps">l</span>-C</span><span 
+class="cmr-10x-x-109">:</span>
+         <!--l. 326-->
+   <div class="lstlisting" id="listing-5"><span class="label"><a 
+ id="x1-14002r1"></a></span><span 
+class="cmr-10x-x-109">speaker</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmbx-10x-x-109">test</span>
+   
+         </div>
+      <!--l. 330--><p class="indent" >    <span 
+class="cmr-10x-x-109">Mocht het dan nog niet werken controleer dan de volumes met:</span>
+         <!--l. 332-->
+   <div class="lstlisting" id="listing-6"><span class="label"><a 
+ id="x1-14003r1"></a></span><span 
+class="cmr-10x-x-109">alsamixer</span>
+   
+         </div>
+      <!--l. 336--><p class="indent" >     <span 
+class="cmr-10x-x-109">en probeer </span><span 
+class="cmtt-10x-x-109">speaker-test </span><span 
+class="cmr-10x-x-109">opnieuw.</span>
+      <!--l. 339--><p class="noindent" >
+         <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">5.3   </span></span> <a 
+ id="x1-150005.3"></a><span 
+class="cmr-10x-x-109">Graphische configuratie</span></h4>
+      <!--l. 341--><p class="noindent" ><span 
+class="cmr-10x-x-109">We kijken eerst of het al werkt met het commando:</span>
+         <!--l. 343-->
+   <div class="lstlisting" id="listing-7"><span class="label"><a 
+ id="x1-15001r1"></a></span><span 
+class="cmr-10x-x-109">/</span><span 
+class="cmr-10x-x-109">etc</span><span 
+class="cmr-10x-x-109">/</span><span 
+class="cmr-10x-x-109">init</span><span 
+class="cmr-10x-x-109">.</span><span 
+class="cmr-10x-x-109">d</span><span 
+class="cmr-10x-x-109">/</span><span 
+class="cmr-10x-x-109">lightdm</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmr-10x-x-109">restart</span>
+   
+         </div>
+      <!--l. 347--><p class="indent" >     <span 
+class="cmr-10x-x-109">Indien je een grapische omgeving ziet ben je klaar. Mocht dat niet zo zijn gebruik dan</span>
+      <span 
+class="cmcsc-10x-x-109">A<span 
+class="small-caps">l</span><span 
+class="small-caps">t</span>-C<span 
+class="small-caps">o</span><span 
+class="small-caps">n</span><span 
+class="small-caps">t</span><span 
+class="small-caps">r</span><span 
+class="small-caps">o</span><span 
+class="small-caps">l</span>-F2 </span><span 
+class="cmr-10x-x-109">om je weer als </span><span 
+class="cmbx-10x-x-109">root </span><span 
+class="cmr-10x-x-109">te kunnen aanmelden en geef dan het volgende commando:</span>
+         <!--l. 350-->
+   <div class="lstlisting" id="listing-8"><span class="label"><a 
+ id="x1-15002r1"></a></span><span 
+class="cmr-10x-x-109">xconfig</span><span 
+class="cmr-10x-x-109">.</span><span 
+class="cmr-10x-x-109">sh</span>
+   
+         </div>
+                                                                                                    
+                                                                                                    
+      <!--l. 354--><p class="noindent" >
+         <h5 class="subsubsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">5.3.1   </span></span> <a 
+ id="x1-160005.3.1"></a><span 
+class="cmr-10x-x-109">Nvida configuratie</span></h5>
+      <!--l. 356--><p class="noindent" ><span 
+class="cmr-10x-x-109">Kijk met </span><!--l. 357-->
+   <div class="lstlisting" id="listing-9"><span class="label"><a 
+ id="x1-16001r1"></a></span><span 
+class="cmr-10x-x-109">lspci</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmsy-10x-x-109">|</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmr-10x-x-109">grep</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">i</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmr-10x-x-109">vga</span>
+   
+         </div>
+      <!--l. 360--><p class="indent" >     <span 
+class="cmr-10x-x-109">of er een ondersteunde Nvidia kaart in de computer zit. Dit doe je door het model op te zoeken in</span>
+      <span 
+class="cmti-10x-x-109">supported devices </span><span 
+class="cmr-10x-x-109">op de pagina </span><a 
+href="https://wiki.debian.org/NvidiaGraphicsDrivers" ><span 
+class="cmr-10x-x-109">Debian Wiki</span></a><span 
+class="cmr-10x-x-109">. Dan weet je welke van de </span><span 
+class="cmtt-10x-x-109">nvidiaXXX.sh </span><span 
+class="cmr-10x-x-109">je moet</span>
+      <span 
+class="cmr-10x-x-109">aanroepen.</span>
+      <!--l. 362--><p class="noindent" >
+         <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">5.4   </span></span> <a 
+ id="x1-170005.4"></a><span 
+class="cmr-10x-x-109">Firmware installeren</span></h4>
+      <!--l. 364--><p class="noindent" ><span 
+class="cmr-10x-x-109">Kijk met </span><!--l. 365-->
+   <div class="lstlisting" id="listing-10"><span class="label"><a 
+ id="x1-17001r1"></a></span><span 
+class="cmr-10x-x-109">dmesg</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmsy-10x-x-109">|</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmr-10x-x-109">grep</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">i</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmr-10x-x-109">firmware</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmsy-10x-x-109">|</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmr-10x-x-109">grep</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">i</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmr-10x-x-109">&#8217;</span><span 
+class="cmr-10x-x-109">failed</span><span 
+class="cmsy-10x-x-109">\|</span><span 
+class="cmr-10x-x-109">missing</span><span 
+class="cmr-10x-x-109">&#8217;</span>
+   
+         </div>
+      <!--l. 368--><p class="indent" >     <span 
+class="cmr-10x-x-109">of er firmware ontbreekt op computer. Indien dit commando uitvoer heeft mist de computer firmware.</span>
+      <span 
+class="cmr-10x-x-109">In de regel wordt de bestandsnaam van de ontbrekende firmware genoemd. Gebruik deze naam om met</span>
+      <span 
+class="cmtt-10x-x-109">apt-file search </span><span 
+class="cmr-10x-x-109">het pakket op te zoeken dat dit bestand levert. Daarna installeer je dat pakket met</span>
+      <span 
+class="cmtt-10x-x-109">apt-get install</span><span 
+class="cmr-10x-x-109">.</span>
+      <!--l. 371--><p class="noindent" >
+         <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">5.5   </span></span> <a 
+ id="x1-180005.5"></a><span 
+class="cmr-10x-x-109">Wireless configuratie</span></h4>
+      <!--l. 372--><p class="noindent" ><span 
+class="cmr-10x-x-109">Kijk met </span><!--l. 373-->
+   <div class="lstlisting" id="listing-11"><span class="label"><a 
+ id="x1-18001r1"></a></span><span 
+class="cmr-10x-x-109">iwconfig</span>
+   
+         </div>
+      <!--l. 376--><p class="indent" >     <span 
+class="cmr-10x-x-109">of er draadloze interfaces zijn. Als deze er niet zijn ben je klaar.</span>
+      <!--l. 378--><p class="indent" >     <span 
+class="cmr-10x-x-109">Maar is, zeg </span><span 
+class="cmtt-10x-x-109">wlan0</span><span 
+class="cmr-10x-x-109">, een draadloze interface. Dan zet je de interface aan met </span><!--l. 379-->
+   <div class="lstlisting" id="listing-12"><span class="label"><a 
+ id="x1-18002r1"></a></span><span 
+class="cmr-10x-x-109">ifconfig</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmr-10x-x-109">wlan0</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmr-10x-x-109">up</span>
+   
+         </div>
+      <!--l. 382--><p class="indent" >     <span 
+class="cmr-10x-x-109">Als dit zonder uitvoer retourneert, heeft de draadloze interface geen firmware nodig.</span>
+      <!--l. 384--><p class="indent" >     <span 
+class="cmr-10x-x-109">Maar als er wel uitvoer is moet je de stappen uit </span><a 
+href="#x1-170005.4"><span 
+class="cmr-10x-x-109">5.4</span><!--tex4ht:ref: ssec:Firmware --></a> <span 
+class="cmr-10x-x-109">nogmaals uitvoeren.</span>
+         <h5 class="subsubsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">5.5.1   </span></span> <a 
+ id="x1-190005.5.1"></a><span 
+class="cmr-10x-x-109">WICD configureren</span></h5>
+      <!--l. 386--><p class="noindent" ><span 
+class="cmr-10x-x-109">Je hebt nu de graphische omgeving nodig. Als je daar niet bent kun je er komen door </span><span 
+class="cmcsc-10x-x-109">A<span 
+class="small-caps">l</span><span 
+class="small-caps">t</span>-F7 </span><span 
+class="cmr-10x-x-109">in te</span>
+      <span 
+class="cmr-10x-x-109">drukken. In het systeemvak vind je het pictogram van de WICD. Je klikt hierop en opent dan via het</span>
+      <span 
+class="cmr-10x-x-109">menu aan de rechterzijde de instellingen.</span>
+      <!--l. 389--><p class="indent" >     <span 
+class="cmr-10x-x-109">Nu moeten we weten hoe de wireless interface heet in het systeem. Dit vind je uit door:</span>
+      <!--l. 390-->
+   <div class="lstlisting" id="listing-13"><span class="label"><a 
+ id="x1-19001r1"></a></span><span 
+class="cmr-10x-x-109">iwconfig</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmr-10x-x-109">2</span><span 
+class="cmmi-10x-x-109">&#x003E;</span><span 
+class="cmr-10x-x-109">/</span><span 
+class="cmr-10x-x-109">dev</span><span 
+class="cmr-10x-x-109">/</span><span 
+class="cmr-10x-x-109">null</span>
+   
+         </div>
+      <!--l. 393--><p class="indent" >     <span 
+class="cmr-10x-x-109">Aan de linkerkant van de uitvoer staat nu de naam van de wireless interface, het zal</span>
+      <span 
+class="cmbx-10x-x-109">wlan0 </span><span 
+class="cmr-10x-x-109">of </span><span 
+class="cmbx-10x-x-109">wlan1 </span><span 
+class="cmr-10x-x-109">zijn. Deze vul je in onder het kopje </span><span 
+class="cmbx-10x-x-109">Netwerkadapters </span><span 
+class="cmr-10x-x-109">bij </span><span 
+class="cmbx-10x-x-109">Draadloze</span>
+      <span 
+class="cmbx-10x-x-109">netwerkadapter</span><span 
+class="cmr-10x-x-109">.</span>
+                                                                                                    
+                                                                                                    
+         <h3 class="sectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">6   </span></span> <a 
+ id="x1-200006"></a><span 
+class="cmr-10x-x-109">Afwerking voor verkoop</span></h3>
+      <!--l. 395--><p class="noindent" ><span 
+class="cmr-10x-x-109">Nu volgen instructies voor het afmaken van de machine voordat ze in de verkoop kan.</span>
+         <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">6.1   </span></span> <a 
+ id="x1-210006.1"></a><span 
+class="cmr-10x-x-109">Verkoopblad maken</span></h4>
+      <!--l. 397--><p class="noindent" ><span 
+class="cmr-10x-x-109">Log in op een werkstation op het netwerk. Je vindt op </span><span 
+class="cmtt-10x-x-109">/home/netwerk/GNUDokComputerEncrypted.ots</span>
+      <span 
+class="cmr-10x-x-109">het sjabloon weermee je het verkoopblad mee moet maken. Je vult op het tabblad &#8216;Spec&#8217; de volgende</span>
+      <span 
+class="cmr-10x-x-109">zaken in:</span>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="cmr-10x-x-109">Processor snelheid, uit te vinden met </span><span 
+class="cmtt-10x-x-109">lscpu</span><span 
+class="cmr-10x-x-109">.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-10x-x-109">De registerbreedte; 32 of 64 bit, ook uit te vinden met </span><span 
+class="cmtt-10x-x-109">lscpu</span><span 
+class="cmr-10x-x-109">.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-10x-x-109">Of het een dualcore is. Met </span><span 
+class="cmtt-10x-x-109">lscpu </span><span 
+class="cmr-10x-x-109">kijk je bij &#8216;Core(s) per socket&#8217;, als dat 2 is heb je een</span>
+     <span 
+class="cmr-10x-x-109">dualcore voor je.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-10x-x-109">Of de machine een HyperTreader is. Met </span><span 
+class="cmtt-10x-x-109">lscpu </span><span 
+class="cmr-10x-x-109">kijk je bij &#8216;Treads(s) per core&#8217;, als dat 2 is</span>
+     <span 
+class="cmr-10x-x-109">heb je een HyperTreader voor je.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-10x-x-109">Of er een wireless interface in zit. Met </span><span 
+class="cmtt-10x-x-109">iwconfig </span><span 
+class="cmr-10x-x-109">als </span><span 
+class="cmtt-10x-x-109">root</span><span 
+class="cmr-10x-x-109">.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-10x-x-109">De hoeveelheid RAM in megabites. Dit doe je met </span><span 
+class="cmtt-10x-x-109">free</span><span 
+class="cmr-10x-x-109">.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-10x-x-109">Het aantal giga bytes van de harddisk. Dit vindt je met </span><span 
+class="cmtt-10x-x-109">dmesg|grep GB</span><span 
+class="cmr-10x-x-109">.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-10x-x-109">Of de graphische kaart versneld is. Dit vindt je uit met </span><span 
+class="cmtt-10x-x-109">lsmod|grep nvidia</span><span 
+class="cmr-10x-x-109">.</span></li></ul>
+      <!--l. 409--><p class="indent" >     <span 
+class="cmr-10x-x-109">Als je klaar bent print je het &#8216;Voorblad&#8217; tabje uit het document. Dit stop je in een plastic insteekhoes</span>
+      <span 
+class="cmr-10x-x-109">en bevestig je met brede plastic tape aan de computer.</span>
+         <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">6.2   </span></span> <a 
+ id="x1-220006.2"></a><span 
+class="cmr-10x-x-109">Reinigen van de hardware</span></h4>
+      <!--l. 411--><p class="noindent" ><span 
+class="cmr-10x-x-109">Maak de kast schoon met een licht vochtige doek. Dompel hiertoe de doek in een sopje van water met een</span>
+      <span 
+class="cmr-10x-x-109">scheutje allesreiginer, en wring het hierna uit. Verwijder met de doek stof en andere ongerechtigheden van</span>
+      <span 
+class="cmr-10x-x-109">de systeemkast.</span>
+         <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">6.3   </span></span> <a 
+ id="x1-230006.3"></a><span 
+class="cmr-10x-x-109">Nacontrole</span></h4>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="cmr-10x-x-109">Controleer  dat  de  computer  zonder  tussenkomst  van  de  gebruiker  kan  opstarten,  het</span>
+     <span 
+class="cmr-10x-x-109">diskwachtwoord  uitgezonderd.  Dat  wil  zeggen  dat  het  niet  nodig  is  om  op  knoppen  of</span>
+     <span 
+class="cmr-10x-x-109">toetsen te drukken om de computer helemaal te laten opstarten, behalve het intypen van het</span>
+     <span 
+class="cmr-10x-x-109">diskwachtwoord.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-10x-x-109">Na rebooten moet de gebruiker &#8216;tux&#8217; automatisch worden aangemeld.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-10x-x-109">Controleer dat je een data CDROM kunt aankoppelen.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-10x-x-109">Controleer dat een audio CD kunt afspelen.</span>
+                                                                                                    
+                                                                                                    
+     </li>
+     <li class="itemize"><span 
+class="cmr-10x-x-109">Controleer dat je een DVD kunt afspelen. Hier vind je hoe je dat doet:</span><br 
+class="newline" /><a 
+href="http://juttersdok.nl/node/543" class="url" ><span 
+class="cmtt-10x-x-109">http://juttersdok.nl/node/543</span></a><span 
+class="cmr-10x-x-109">.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-10x-x-109">Controleer dat je na een reboot direct op internet kunt met een browser.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-10x-x-109">Start </span><span 
+class="cmtt-10x-x-109">frozen-bubble </span><span 
+class="cmr-10x-x-109">op en ga naar fullscreen mode met de toets &#8216;f&#8217; en overtuig jezelf ervan</span>
+     <span 
+class="cmr-10x-x-109">dat het spel nog steeds werkt.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-10x-x-109">Steek  een  USB-stick  in  de  machine  en  controleer  dat  deze  wordt  opgemerkt  door  de</span>
+     <span 
+class="cmr-10x-x-109">windowmanager, daardat ze vraagt wat je ermee wilt doen.</span></li></ul>
+      <!--l. 424--><p class="noindent" >
+         <h3 class="sectionHead"><span class="titlemark"><span 
+class="cmr-10x-x-109">A   </span></span> <a 
+ id="x1-24000A"></a><span 
+class="cmr-10x-x-109">APT overlevings trucs</span></h3>
+      <!--l. 425--><p class="noindent" ><span 
+class="cmr-10x-x-109">Als APT een grote hoeveelheid pakketten in een keer moet installeren, doet ze het volgende, eerst alles</span>
+      <span 
+class="cmr-10x-x-109">ophalen, dan alles uitpakken, en dan alles instellen. Als ze in het instellings gedeelte wordt</span>
+      <span 
+class="cmr-10x-x-109">gestopt, dan heeft ze het volgende commando nodig om waar in normale staat te geraken:</span>
+      <!--l. 426-->
+   <div class="lstlisting" id="listing-14"><span class="label"><a 
+ id="x1-24001r1"></a></span><span 
+class="cmr-10x-x-109">dpkg</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">configure</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">a</span>
+   
+         </div>
+      <!--l. 430--><p class="indent" >     <span 
+class="cmr-10x-x-109">In het geval van een losse installatie van een pakket met </span><span 
+class="cmtt-10x-x-109">dpkg -i </span><span 
+class="cmr-10x-x-109">waarbij afhankelijkheden ontbreken,</span>
+      <span 
+class="cmr-10x-x-109">kun je dat oplossen met: </span><!--l. 431-->
+   <div class="lstlisting" id="listing-15"><span class="label"><a 
+ id="x1-24002r1"></a></span><span 
+class="cmr-10x-x-109">apt</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">get</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmr-10x-x-109">f</span><span 
+class="cmr-10x-x-109">&#x00A0;</span><span 
+class="cmr-10x-x-109">install</span>
+   
+         </div>
+          
+</body></html> 
+
+                                                                                                    
+
+
