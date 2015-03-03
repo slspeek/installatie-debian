@@ -25,7 +25,7 @@
 \section{Algemene aanwijzingen}
 \emph{Zeer belangrijk:} Iedere vraag die door het installatie programma aan jou wordt gesteld en waarover hieronder niets staat vermeldt beantwoordt je met de \textsc{enter}-toets.
 
-Als de debian installer naar een nieuw scherm gaat, begint er in deze handleiding een nieuwe paragraaf
+Als de debian installer naar een nieuw scherm gaat, begint er in deze handleiding een nieuwe paragraaf.
 
 
 \section{Floppy station onklaar maken}
@@ -382,6 +382,15 @@ ifconfig wlan0 up
 Als dit zonder uitvoer retourneert, heeft de draadloze interface geen firmware nodig.
 
 Maar als er wel uitvoer is moet je de stappen uit \ref{ssec:Firmware} nogmaals uitvoeren.
+\subsubsection{WICD configureren}
+Je hebt nu de graphische omgeving nodig. Als je daar niet bent kun je er komen door \textsc{Alt-F7} in te drukken.
+In het systeemvak vind je het pictogram van de WICD. Je klikt hierop en opent dan via het menu aan de rechterzijde de instellingen. 
+
+Nu moeten we weten hoe de wireless interface heet in het systeem. Dit vind je uit door:
+\begin{lstlisting}[language=bash]
+iwconfig 2>/dev/null
+\end{lstlisting}
+Aan de linkerkant van de uitvoer staat nu de naam van de wireless interface, het zal \textbf{wlan0} of  \textbf{wlan1} zijn. Deze vul je in onder het kopje \textbf{Netwerkadapters} bij \textbf{Draadloze netwerkadapter}.
 \section{Afwerking voor verkoop}
 Nu volgen instructies voor het afmaken van de machine voordat ze in de verkoop kan.
 \subsection{Verkoopblad maken}
@@ -408,7 +417,7 @@ Maak de kast schoon met een licht vochtige doek. Dompel hiertoe de doek in een s
   \item Controleer dat een audio CD kunt afspelen.
   \item Controleer dat je een DVD kunt afspelen. Hier vind je hoe je dat doet:\\ \url{http://juttersdok.nl/node/543}.
 	\item Controleer dat je na een reboot direct op internet kunt met een browser.
-	\item Start \texttt{frozeni-bubble} op en ga naar fullscreen mode met de toets `f' en overtuig jezelf ervan dat het spel nog steeds werkt.
+	\item Start \texttt{frozen-bubble} op en ga naar fullscreen mode met de toets `f' en overtuig jezelf ervan dat het spel nog steeds werkt.
   \item Steek een USB-stick in de machine en controleer dat deze wordt opgemerkt door de windowmanager, daardat ze vraagt wat je ermee wilt doen.
 \end{itemize}
 \appendix
