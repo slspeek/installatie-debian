@@ -4,7 +4,7 @@ viewpdf:
 	pdflatex installatie.tex; xpdf installatie.pdf
 
 viewhtml:
-	tex4ht installatie.tex; x-www-browser installatie.html
+	htlatex installatie.tex installatie; x-www-browser installatie.html
 
 prepare:
 	sudo apt-get install texlive xpdf 

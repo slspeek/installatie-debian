@@ -1,0 +1,446 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[dutch]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{hyperref}
+
+
+\begin{document}
+\graphicspath{ {./images/} }
+\DeclareGraphicsExtensions{.png,.jpg}
+\lstset{language=bash}      
+\author{Steven L. Speek}
+\title{GNUAmsterdam Debian Wheezy Installatie}
+\date{\today}
+\maketitle
+\abstract{Nederlandse handleiding voor een Nederlands gelokaliseerde Debian desktop installatie.}
+
+
+\section{Algemene aanwijzingen}
+\emph{Zeer belangrijk:} Iedere vraag die door het installatie programma aan jou wordt gesteld en waarover hieronder niets staat vermeldt beantwoordt je met de \textsc{enter}-toets.
+
+Als de debian installer naar een nieuw scherm gaat, begint er in deze handleiding een nieuwe paragraaf.
+\subsection{Typografische conventies}
+Om te verduidelijken wat de bedoeling van een bepaald stukje tekst is, hanteren we typografi\"{e}en:
+\begin{table}[H]
+\begin{tabular}{l l}
+	\textsc{Small Caps} & voor toetsencombinaties \\
+	\textbf{Bold face} & voor invoer en optie namen van de Debian Installer\\
+	\texttt{Typewriter} & voor commando's voor de opdrachtregel\\
+\end{tabular}
+\end{table}
+
+
+\section{Floppy station onklaar maken}
+Floppy stations zijn een erfenis uit het verleden. Schakel de floppy ondersteuning in de BIOS uit. En maak de kabels verbonden met het floppy-station los.
+
+
+\section{CDROM ophalen}
+Op \href{http://www.debian.org/distrib}{Debian website} kies je een klein installatie-image voor jouw architectuur (meestal amd64, soms nog i686).
+Brandt dit op een CDROM, dit zullen wij de installatie CDROM noemen.
+
+
+\section{Installatie basissysteem}
+Wij gaan nu met de debian installer een simpel basissysteem installeren. Dit begint met het instellen van gegevens over onze plek op aarde en de taal die wij wensen te gebruiken met het nieuwe systeem.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{bootmenu}
+\caption{Je kiest hier de eerste optie \textbf{Install} met \textsc{enter}, om de installatie te beginnen. }
+\label{fig:taal-keuze-scherm}
+\end{figure}
+
+Boot van de installatie CDROM. Je komt dan in een menu.
+Je accepteert de eerste optie \textbf{Install} met \textsc{enter}.
+
+
+\subsection{Localisatie instellingen}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{taal-keuze-scherm}
+\includegraphics[width=0.45\textwidth]{lokatie-keuze-scherm}
+\caption{Taal en lokatie instellingen.}
+\label{fig:taal-keuze-scherm}
+\end{figure}
+
+Op het volgende twee schermen, zie figuur~\ref{fig:taal-keuze-scherm},  moet je de taal kiezen; kies \textbf{Dutch} (pijltje omhoog en dan \textsc{enter}). In de scherm daarna, selecteer je  \textbf{Nederland} als land en drukt op \textsc{enter}. Vanaf gaan we niet meer zeggen dat je op \textsc{enter} moet drukken.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{toetsenbord-indeling-scherm}
+\caption{Kies hier \textbf{American English}.}
+\label{fig:toetsenbord-indeling-scherm}
+\end{figure}
+
+Als toetsenbordindeling kies je \textbf{American English} (zie figuur~\ref{fig:toetsenbord-indeling-scherm}).
+
+
+\subsection{Netwerk instellingen}
+Je wacht tot de debian installer de aanvullende installatie modules heeft geladen. Het kan zijn dat er vragen komen over ontbrekende firmware. Die moet je allen met \textbf{nee} beantwoorden.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{computernaam-scherm}
+\includegraphics[width=0.45\textwidth]{domeinnaam-scherm}
+\caption{Hostnaam en domeinnaam schermen.}
+\label{fig:computernaam-scherm}
+\end{figure}
+
+Vul \textbf{debian} in als computernaam (figuur~\ref{fig:computernaam-scherm}).
+
+En vul \textbf{lan} in bij domeinnaam.
+
+
+\subsection{Gebruikers en wachtwoorden}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{root-wachtwoord-scherm}
+\includegraphics[width=0.45\textwidth]{root-wachtwoord-bevestiging}
+\caption{Vul hier tweemaal \textbf{root} in.}
+\label{fig:root-wachtwoord-scherm}
+\end{figure}
+
+Nu moeten het root wachtwoord worden gezet, zie figuur~\ref{fig:root-wachtwoord-scherm}.
+Vul als root wachtwoord \textbf{root} in, en doe dit nogmaals ter controle.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{nieuwe-gebruiker-naam}
+\includegraphics[width=0.45\textwidth]{nieuwe-gebruiker-echte-naam}
+\caption{Toevoegen van een nieuwe gebruiker.}
+\label{fig:nieuwe-gebruiker}
+\end{figure}
+
+Je vult \textbf{Tux} in als volledige naam van de nieuwe aardse gebruiker (figuur~\ref{fig:nieuwe-gebruiker}).
+De debian installer suggereert dan \textbf{tux} als gebruikersnaam.
+Dat accepteer je met \textsc{enter}.
+
+Als wachtwoord vul je \textbf{tux} in. Dit moet nog een keer worden bevestigd.
+
+
+\subsection{Schijfindeling}
+Bij de schijfindeling kies je \textbf{Begeleid - benut gehele schijf en gebruik LVM met encryptie}, zoals in figuur~\ref{fig:schijven-indelen}.
+Nu kies je de schijf die moet worden ingedeeld; dit zal meestal geen keuze opleveren, omdat de meeste machines maar \'{e}\'{e}n schijf hebben.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{schijven-indelen-scherm}
+\includegraphics[width=0.45\textwidth]{schijf-uitkiezen-scherm}
+\caption{Kies hier de optie met encryptie.}
+\label{fig:schijven-indelen}
+\end{figure}
+
+
+Nu moet je kiezen hoe de schijf gaat worden opgedeeld (figuur~\ref{fig:aparte-partities}); je kiest de onderste optie \textbf{Afzondelijke /home, /usr, /var en /tmp partitie}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{schijf-indelen-afzonderlijke-partities}
+\includegraphics[width=0.45\textwidth]{lvm-instellen-scherm}
+\caption{In de eerste scherm kiest je de onderste optie.}
+\label{fig:aparte-partities}
+\end{figure}
+
+
+Nadat je dit bevestigd hebt, gaat de installer de gehele disk wissen (figuur~\ref{fig:schijf-wissen}), dat kan even duren (in de orde van uren). Je mag dit annuleren.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{schijven-wissen-scherm}
+\caption{Je mag dit annuleren.}
+\label{fig:schijf-wissen}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{schijven-wachtwoordzin-scherm}
+\includegraphics[width=0.45\textwidth]{schijven-wachtwoordzin-bevestiging}
+\includegraphics[width=0.45\textwidth]{schijven-zwakke-wachtwoordzin}
+\caption{Vul hier \textbf{gnu} in als wachtwoordzin.}
+\label{fig:wachtwoordzin-scherm}
+\end{figure}
+
+Zoals in figuur~\ref{fig:wachtwoordzin-scherm} wordt er om een wachtwoordzin gevraagd, je vult \textbf{gnu} in.
+
+Dit moet je nogmaals te controle doen.
+
+Je moet nu bevestigen dat dit een zwakke wachtwoordzin is. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{schijven-overzicht-scherm}
+\includegraphics[width=0.45\textwidth]{schijven-tweede-overzicht-scherm}
+\caption{Bevestig tweemaal de gemaakte schijfindeling.}
+\label{fig:schijven-overzicht}
+\end{figure}
+
+
+Het partitie schema wordt nog eenmaal aan je getoond (figuur~\ref{fig:schijven-overzicht}) met de mogelijkheid om wijzingen aan te brengen. Dat doe je niet, maar gaat verder.
+
+Daarna wordt het nogmaals ter bevestiging getoond, opdat je het nog \'{e}\'{e}n keer kunt controleren. Je bevestigt de voorgestelde keuze.
+
+
+\subsection{Pakketbeheer}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{pakketbeheer-landkeuze-scherm}
+\includegraphics[width=0.45\textwidth]{pakketbeheer-mirror-scherm}
+\caption{Kies \textbf{Nederlands} als land van de Debian-archief-spiegelserver en als spiegelserver \textbf{ftp.nluug.nl}.}
+\label{fig:pakketten}
+\end{figure}
+
+Zoals je in figuur~\ref{fig:pakketten} ziet moet je als land voor je Debian mirror \textbf{Nederland} kiezen en in het scherm daarop volgend kies je \textbf{ftp.nluug.nl}. 
+
+
+Op de vraag die daarop volgt (figuur~\ref{fig:httpproxy}), waar je een HTTP-proxy moet kiezen druk je alleen \textsc{enter}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{pakketbeheer-proxy-scherm}
+\caption{Hier laat je het invul veld leeg en drukt alleen op \textsc{enter}.}
+\label{fig:httpproxy}
+\end{figure}
+
+Zoals in figuur~\ref{fig:popcon} te zien is willen wij meedoen aan de populariteits competitie. Hiermee laten wij aan de vrijwilligers van Debian weten welke programma eindgebruikers belangrijk vinden, opdat zij hun prioriteiten goed kunnen stellen.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{populariteits-contest-scherm}
+\caption{Je selecteert hier \textbf{ja}.}
+\label{fig:popcon}
+\end{figure}
+
+\subsection{Software selectie}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{software-selectie-scherm}
+\label{fig:software-selectie-scherm}
+\end{figure}
+
+Nu volgt er een scherm (figuur~\ref{fig:software-selectie-scherm}) over de te installeren programma's. Omdat wij een aangepaste installatie doen, mag je hier alleen \textbf{Standaard systeemhulpmiddelen} aangevinkt laten. Je gaat met de pijltjestoetsen omhoog naar \textbf{Debian desktop environment} en vinkt deze uit met de spatiebalk. Dan navigeer je met \textsc{tab} naar \textbf{Volgende} en drukt op \textsc{enter}.
+
+\subsection{Bootloader}
+
+Je gaat mee in het voorstel van figuur~\ref{fig:grub} om GRUB in het masterboot record op te installeren.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{grub-installatie-scherm}
+\caption{Je laat GRUB in het masterboot record installeren}
+\label{fig:grub}
+\end{figure}
+
+Nu rond je de installatie af zoals in figuur~\ref{fig:afronden}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{installatie-afronden-scherm}
+\caption{Je leest de instructies, voert ze uit en kiest \textbf{Volgende}.}
+\label{fig:afronden}
+\end{figure}
+
+\section{Debian Amsterdam specifieke installatie}
+
+Omdat wij de het systeem hebben laten versleutelen moeten we bij het opstarten een wachtwoordzin opgeven om verder te gaan (figuur~\ref{fig:diskwachtwoord}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{diskwachtwoordzin-scherm}
+\caption{Je typt hier \textbf{gnu}, gevolgd door \textsc{enter}. Merk op dat de karakters niet op het scherm verschijnen, ook niet als sterretjes.}
+\label{fig:diskwachtwoord}
+\end{figure}
+
+Nu verschijnt het tekstlogin scherm van Linux. Dit noemen we een \textit{virtual terminal}. Volg de aanwijzingen van figuur~\ref{fig:loginprompt} op.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{loginprompt-scherm}
+\includegraphics[width=0.45\textwidth]{ingelogd-scherm}
+\caption{Achter \textbf{debian login:} type je \textbf{root}, gevolgd door \textsc{enter}, dit is tevens het wachtwoord. Dus als \textbf{Password:} verschijnt type je weer \textbf{root}, gevolgd door \textsc{enter}.}
+\label{fig:loginprompt}
+\end{figure}
+
+\subsection{Installatie van gekozen pakketten}
+
+Nu zie je in het scherm een \textbf{\#}, dit betekent dat je bent aangemeld als beheerder.
+Zoals in figuur~\ref{fig:bootstrap-commando} alvast te zien is, gaan wij onze Debian Amsterdam scripts ophalen met het volgende commando:
+
+\begin{lstlisting}[language=bash]
+wget --no-check-certificate -q -O- goo.gl/WHL7kR|sh
+\end{lstlisting}
+Ter verduidelijking de tekens: \texttt{-O-} bestaan uit 'min', 'hoofdletter O' en 'min'.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{bootstrap-commando-scherm}
+\caption{Het \texttt{wget} commando om het aangepaste installatie programma op te halen.}
+\label{fig:bootstrap-commando}
+\end{figure}
+
+Het volgende commando dat wij geven zal een groot gedeelte van de installatie verder uitvoeren, helaas moet je er wel even bijblijven omdat er een paar vragen worden gesteld.
+
+\begin{lstlisting}[language=bash]
+install-debian.sh
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{install-debian-scherm}
+\caption{We roepen hier het hoofdscript aan met \texttt{install-debian.sh}}
+\label{fig:install-debian}
+\end{figure}
+
+De vraag die wordt gesteld is over het wachtwoord en volledige naam van de nieuwe gebruiker \textbf{tux}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{tux-wachtwoord-scherm}
+\includegraphics[width=0.45\textwidth]{tux-volledige-naam-scherm}
+\caption{Hier geef je als wachtwoord \textbf{tux}, gevolgd door \textsc{enter}. Dit moet je nog een keer doen en dan bij \textbf{Volledige naam []:} moet je \textbf{Tux} invullen. Daarna druk je op \textsc{enter} tot het script verder loopt.}
+\label{fig:tuxinfo}
+\end{figure}
+
+Dan is het tijd om de extra pakketten te installeren met:
+\begin{lstlisting}[language=bash]
+install-nice-to-have.sh
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{install-nice-to-have-scherm}
+\caption{Het commando voor de extra pakketten.}
+\label{fig:nicetohave}
+\end{figure}
+
+\subsection{Geluid configuratie}
+
+Om het geluidssysteem te initialiseren geeft je het volgende commando:
+
+\begin{lstlisting}[language=bash]
+alsactl init
+\end{lstlisting}
+
+Nu ga je het geluid testen met het volgende commando, wat je kunt (en moet) onderbreken met \textsc{Control-C}:
+
+\begin{lstlisting}[language=bash]
+speaker-test
+\end{lstlisting}
+
+Mocht het dan nog niet werken controleer dan de volumes met:
+
+\begin{lstlisting}[language=bash]
+alsamixer
+\end{lstlisting}
+
+en probeer \texttt{speaker-test} opnieuw.
+
+
+\subsection{Graphische configuratie}
+
+We kijken eerst of het al werkt met het commando:
+
+\begin{lstlisting}[language=bash]
+/etc/init.d/lightdm restart
+\end{lstlisting}
+
+Indien je een grapische omgeving ziet ben je klaar. Mocht dat niet zo zijn gebruik dan \textsc{Alt-Control-F2} om je weer als \textbf{root} te kunnen aanmelden en geef dan het volgende commando:
+
+
+\begin{lstlisting}[language=bash]
+xconfig.sh
+\end{lstlisting}
+
+\subsubsection{Nvida configuratie}
+
+Kijk met 
+\begin{lstlisting}[language=bash]
+lspci | grep -i vga
+\end{lstlisting}
+of er een ondersteunde Nvidia kaart in de computer zit. Dit doe je door het model op te zoeken in \textit{supported devices} op de pagina \href{https://wiki.debian.org/NvidiaGraphicsDrivers}{Debian Wiki}. Dan weet je welke van de  \texttt{nvidiaXXX.sh} je moet aanroepen.
+
+\subsection{Firmware installeren}
+\label{ssec:Firmware}
+Kijk met 
+\begin{lstlisting}[language=bash]
+dmesg | grep -i firmware | grep -i 'failed\|missing'
+\end{lstlisting}
+of er firmware ontbreekt op computer.
+Indien dit commando uitvoer heeft mist de computer firmware. In de regel wordt de bestandsnaam van de ontbrekende firmware genoemd. Gebruik deze naam om met \texttt{apt-file search} het pakket op te zoeken dat dit bestand levert. Daarna installeer je dat pakket met \texttt{apt-get install}.
+
+\subsection{Wireless configuratie}
+Kijk met 
+\begin{lstlisting}[language=bash]
+iwconfig
+\end{lstlisting}
+of er draadloze interfaces zijn. Als deze er niet zijn ben je klaar. 
+
+Maar is, zeg \texttt{wlan0}, een draadloze interface. Dan zet je de interface aan met 
+\begin{lstlisting}[language=bash]
+ifconfig wlan0 up
+\end{lstlisting}
+Als dit zonder uitvoer retourneert, heeft de draadloze interface geen firmware nodig.
+
+Maar als er wel uitvoer is moet je de stappen uit \ref{ssec:Firmware} nogmaals uitvoeren.
+\subsubsection{WICD configureren}
+Je hebt nu de graphische omgeving nodig. Als je daar niet bent kun je er komen door \textsc{Alt-F7} in te drukken.
+In het systeemvak vind je het pictogram van de WICD. Je klikt hierop en opent dan via het menu aan de rechterzijde de instellingen. 
+
+Nu moeten we weten hoe de wireless interface heet in het systeem. Dit vind je uit door:
+\begin{lstlisting}[language=bash]
+iwconfig 2>/dev/null
+\end{lstlisting}
+Aan de linkerkant van de uitvoer staat nu de naam van de wireless interface, het zal \textbf{wlan0} of  \textbf{wlan1} zijn. Deze vul je in onder het kopje \textbf{Netwerkadapters} bij \textbf{Draadloze netwerkadapter}.
+\section{Afwerking voor verkoop}
+Nu volgen instructies voor het afmaken van de machine voordat ze in de verkoop kan.
+\subsection{Verkoopblad maken}
+Log in op een werkstation op het netwerk. Je vindt op \texttt{/home/netwerk/GNUDokComputerEncrypted.ots} het sjabloon weermee je het verkoopblad mee moet maken. Je vult op het tabblad `Spec' de volgende zaken in:
+\begin{itemize}
+	\item Processor snelheid, uit te vinden met \texttt{lscpu}.
+	\item De registerbreedte; 32 of 64 bit, ook uit te vinden met \texttt{lscpu}.
+	\item Of het een dualcore is. Met \texttt{lscpu} kijk je bij `Core(s) per socket', als dat 2 is heb je een dualcore voor je.
+	\item Of de machine een HyperThreader is. Met \texttt{lscpu} kijk je bij `Threads(s) per core', als dat 2 is heb je een HyperThreader voor je. 
+	\item Of er een wireless interface in zit. Met \texttt{iwconfig} als \texttt{root}.
+	\item De hoeveelheid RAM in megabites. Dit doe je met \texttt{free}.
+	\item Het aantal giga bytes van de harddisk. Dit vindt je met \texttt{dmesg|grep GB}.
+	\item Of de graphische kaart versneld is. Dit vindt je uit met \texttt{lsmod|grep nvidia}.
+\end{itemize}
+
+Als je klaar bent print je het `Voorblad' tabje uit het document. Dit stop je in een plastic insteekhoes en bevestig je met brede plastic tape aan de computer.
+\subsection{Reinigen van de hardware}
+\subsubsection{Verwijderen van de Microsoft licensie sticker}
+Je legt een natte vaatdoek met een beetje zeep op de licensie sticker en laat deze tien minuten weken, daarna verwijder je de sticker. Je nu de belangrijkste zuivering acher de rug hebt ga je verder met het schoonmaken van de kast.
+\subsubsection{Reinigen kast}
+Maak de kast schoon met een licht vochtige doek. Dompel hiertoe de doek in een sopje van water met een scheutje allesreiginer, en wring het hierna uit. Verwijder met de doek stof en andere ongerechtigheden van de systeemkast.
+\subsection{Nacontrole}
+\begin{itemize}
+	\item Controleer dat de computer zonder tussenkomst van de gebruiker kan opstarten, het diskwachtwoord uitgezonderd. Dat wil zeggen dat het niet nodig is om op knoppen of toetsen te drukken om de computer helemaal te laten opstarten, behalve het intypen van het diskwachtwoord, zoals figuur~\ref{fig:diskwachtwoord} toont.
+	\item Na rebooten moet de gebruiker `tux' automatisch worden aangemeld.
+	\item Controleer dat je een data CDROM kunt aankoppelen.
+  \item Controleer dat een audio CD kunt afspelen.
+  \item Controleer dat je een DVD kunt afspelen. Hier vind je hoe je dat doet:\\ \url{http://juttersdok.nl/node/543}.
+	\item Controleer dat je na een reboot direct op internet kunt met een browser.
+	\item Start \texttt{frozen-bubble} op en ga naar fullscreen mode met de toets \textsc{f} en overtuig jezelf ervan dat het spel nog steeds werkt.
+  \item Steek een USB-stick in de machine en controleer dat deze wordt opgemerkt door de windowmanager, doordat ze vraagt wat je ermee wilt doen.
+\end{itemize}
+\appendix
+\section{APT overlevings trucs}
+Als APT een grote hoeveelheid pakketten in een keer moet installeren, doet ze het volgende, eerst alles ophalen, dan alles uitpakken, en dan alles instellen. Als ze in het instellings gedeelte wordt gestopt, dan heeft ze het volgende commando nodig om waar in normale staat te geraken:
+\begin{lstlisting}[language=bash]
+dpkg --configure -a
+\end{lstlisting}
+
+In het geval van een losse installatie van een pakket met \texttt{dpkg -i} waarbij afhankelijkheden ontbreken, kun je dat oplossen met:
+\begin{lstlisting}[language=bash]
+apt-get -f install
+\end{lstlisting}
+\end{document}
