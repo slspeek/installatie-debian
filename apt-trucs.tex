@@ -1,0 +1,11 @@
+\appendix
+\section{APT overlevings trucs}
+Als APT een grote hoeveelheid pakketten in een keer moet installeren, doet ze het volgende, eerst alles ophalen, dan alles uitpakken, en dan alles instellen. Als ze in het instellings gedeelte wordt gestopt, dan heeft ze het volgende commando nodig om waar in normale staat te geraken:
+\begin{lstlisting}[language=bash]
+dpkg --configure -a
+\end{lstlisting}
+
+In het geval van een losse installatie van een pakket met \texttt{dpkg -i} waarbij afhankelijkheden ontbreken, kun je dat oplossen met:
+\begin{lstlisting}[language=bash]
+apt-get -f install
+\end{lstlisting}

@@ -1,10 +1,16 @@
 export PATH:=/sbin:/usr/sbin:${PATH}
 
-viewpdf:
-	pdflatex installatie.tex; xpdf installatie.pdf
+faipdf:
+	pdflatex --output-directory output geautomatiseerd-artikel.tex; xpdf output/geautomatiseerd-artikel.pdf
 
-viewhtml:
-	htlatex installatie.tex installatie; x-www-browser installatie.html
+handpdf:
+	pdflatex --output-directory output handmatig-artikel.tex; xpdf output/handmatig-artikel.pdf
+
+handhtml:
+	htlatex handmatig-artikel.tex installatie -utf8; x-www-browser handmatig-artikel.html
+
+faihtml:
+	htlatex geautomatiseerd-artikel.tex installatie -utf8; x-www-browser geautomatiseerd-artikel.html
 
 prepare:
 	sudo apt-get install texlive xpdf 

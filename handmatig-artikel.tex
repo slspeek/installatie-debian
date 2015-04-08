@@ -1,0 +1,36 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[dutch]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{hyperref}
+
+
+\begin{document}
+\graphicspath{ {./images/} }
+\DeclareGraphicsExtensions{.png,.jpg}
+\lstset{language=bash}      
+\author{Steven L. Speek}
+\title{Handmatige Debian Wheezy Installatie}
+\date{\today}
+\maketitle
+\abstract{Nederlandse handleiding voor een Nederlands gelokaliseerde Debian desktop installatie.}
+
+\input{algemene-aanwijzingen}
+
+\input{handmatige-installatie}
+
+\input{afwerking}
+
+\input{verkoop-handmatig}
+
+\input{nacontrole-handmatig}
+
+\input{apt-trucs}
+
+\end{document}
