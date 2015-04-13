@@ -1,6 +1,8 @@
 \section{Voorbereiding}
 \subsection{MAC adres achterhalen}
-Laat de machine die je wilt installeren opstarten en ga de BIOS in. In de BIOS schakel je boot ROM faciliteiten in. En configureer je de netwerkkaart als eerste boot-optie. Dan laat je de netwerkboot lopen en schrijft van de scherm het MAC-adres over. Dit zijn zes groepjes van twee cijfers en letters met dubbele punten ertussen. 
+Laat de machine die je wilt installeren opstarten en ga de BIOS in (veel gebruikte toestsen hiervoor zijn \texttt{F2}, \texttt{F10} of \texttt{delete}). In de BIOS schakel je boot ROM faciliteiten in. Via het boot-menu (\texttt{F8}) laat je dan de netwerkboot lopen en schrijft van de scherm het MAC-adres over. Dit zijn zes groepjes van twee cijfers en letters met dubbele punten ertussen. 
+
+Mocht je dit niet voor elkaar te krijgen, boot dan van \texttt{gPXE 1.0.1}-cdrom, en schrijf dan het MAC-adres over.
 
 \section{FAI server instellen}
 Om te kunnen bestaan heeft de nieuw te installeren machine een unieke hostnaam nodig van de vorm \texttt{debianNN}. Deze zal in \texttt{/etc/hosts} moeten worden opgenomen. Vervolgens moet het MAC-adres van de computer hieraan worden gekoppeld. Alle commando's die je in de volgende drie secties ziet staan, dienen als root op de faiserver uitgevoerd te worden.
@@ -42,5 +44,5 @@ Voor 32-bit is het:
 pxe-i386.sh debianNN
 \end{lstlisting}
 
-Nu zou je je te installeren machine kunnen laten booten van haar netwerkkaart en de automatische installatie zou moeten beginnen.
+Nu zou je je te installeren machine kunnen laten booten van haar netwerkkaart, al dan niet via \texttt{gPXE 1.0.1}-cdrom,  en de automatische installatie zou moeten beginnen.
 
