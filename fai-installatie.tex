@@ -14,6 +14,11 @@ Je gaat precies \'{e}\'{e}n hoger zitten. Deze voeg je toe aan \texttt{/etc/host
 \begin{lstlisting}[language=bash]
 vim /etc/hosts
 \end{lstlisting}
+Enkele tips hierbij zijn om de laatste regel van de vorm:
+\begin{lstlisting}[language=bash]
+10.0.40.NNN			debianMM
+\end{lstlisting}
+te kopieren met \texttt{yy} en daaronder te plakken met \texttt{p}. Je navigeert tot onder het laatste getal van het ip-adres (in normal mode) met \texttt{e} (je kunt terug met \texttt{b}). Dan geef je \texttt{Control-a} om het getal met \'{e}\'{e}n op te hogen. Dit doe je ook het \texttt{debianMM}. Dan sla het bestand op het \texttt{ZZ}. Merk op dat je helemaal niet in insert mode hoeft te gaan.
 \subsection{DHCP-server instellen}
 Met het speciaal daarvoor bestemde fai-util \texttt{dhcp-edit} voeg je deze in vorige sectie gekozen hostnaam en mac-adres toe.
 \begin{lstlisting}[language=bash]
