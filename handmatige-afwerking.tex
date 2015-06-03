@@ -1,0 +1,78 @@
+\section{Handmatige afwerking}
+\subsection{Geluid configuratie}
+
+Om het geluidssysteem te initialiseren geeft je het volgende commando:
+
+\begin{lstlisting}[language=bash]
+alsactl init
+\end{lstlisting}
+
+Nu ga je het geluid testen met het volgende commando, wat je kunt (en moet) onderbreken met \texttt{Control-C}:
+
+\begin{lstlisting}[language=bash]
+speaker-test
+\end{lstlisting}
+
+Mocht het dan nog niet werken controleer dan de volumes met:
+
+\begin{lstlisting}[language=bash]
+alsamixer
+\end{lstlisting}
+
+en probeer \texttt{speaker-test} opnieuw.
+
+
+\subsection{Graphische configuratie}
+
+We kijken eerst of het al werkt met het commando:
+
+\begin{lstlisting}[language=bash]
+/etc/init.d/lightdm restart
+\end{lstlisting}
+
+Indien je een grapische omgeving ziet ben je klaar. Mocht dat niet zo zijn gebruik dan \texttt{Alt-Control-F2} om je weer als \textbf{root} te kunnen aanmelden en geef dan het volgende commando:
+
+
+\begin{lstlisting}[language=bash]
+xconfig.sh
+\end{lstlisting}
+
+\subsubsection{Nvida configuratie}
+
+Kijk met 
+\begin{lstlisting}[language=bash]
+nvidia-detect
+\end{lstlisting}
+of er een ondersteunde Nvidia kaart in de computer zit. Je kunt \'{e}\'{e}n van onze \texttt{nvidiaXXX.sh} scripts aanroepen indien er een ondersteunde kaart in zit.
+\subsection{Firmware installeren}
+\label{ssec:Firmware}
+Kijk met 
+\begin{lstlisting}[language=bash]
+dmesg | grep -i firmware | grep -i 'failed\|missing'
+\end{lstlisting}
+of er firmware ontbreekt op computer.
+Indien dit commando uitvoer heeft mist de computer firmware. In de regel wordt de bestandsnaam van de ontbrekende firmware genoemd. Gebruik deze naam om met \texttt{apt-file search} het pakket op te zoeken dat dit bestand levert. Daarna installeer je dat pakket met \texttt{apt-get install}.
+
+\subsection{Wireless configuratie}
+Kijk met 
+\begin{lstlisting}[language=bash]
+iwconfig
+\end{lstlisting}
+of er draadloze interfaces zijn. Als deze er niet zijn ben je klaar. 
+
+Maar is, zeg \texttt{wlan0}, een draadloze interface. Dan zet je de interface aan met 
+\begin{lstlisting}[language=bash]
+ifconfig wlan0 up
+\end{lstlisting}
+Als dit zonder uitvoer retourneert, heeft de draadloze interface geen firmware nodig.
+
+Maar als er wel uitvoer is moet je de stappen uit \ref{ssec:Firmware} nogmaals uitvoeren.
+\subsubsection{WICD configureren}
+Je hebt nu de graphische omgeving nodig. Als je daar niet bent kun je er komen door \texttt{Alt-F7} in te drukken.
+In het systeemvak vind je het pictogram van de WICD. Je klikt hierop en opent dan via het menu aan de rechterzijde de instellingen. 
+
+Nu moeten we weten hoe de wireless interface heet in het systeem. Dit vind je uit door:
+\begin{lstlisting}[language=bash]
+iwconfig 2>/dev/null
+\end{lstlisting}
+Aan de linkerkant van de uitvoer staat nu de naam van de wireless interface, het zal \textbf{wlan0} of  \textbf{wlan1} zijn. Deze vul je in onder het kopje \textbf{Netwerkadapters} bij \textbf{Draadloze netwerkadapter}.

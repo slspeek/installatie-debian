@@ -1,0 +1,34 @@
+\section{FAI server instellen}
+Om te kunnen bestaan heeft de nieuw te installeren machine een unieke hostnaam nodig van de vorm \texttt{debianNN}. Deze zal in \texttt{/etc/hosts} moeten worden opgenomen. Vervolgens moet het MAC-adres van de computer hieraan worden gekoppeld. Alle commando's die je in de volgende drie secties ziet staan, dienen als root op een faiserver uitgevoerd te worden.
+
+Indien je een 32-bit machine wilt installeren, neem je als faiserver de \texttt{fai32}, anders de \texttt{faijes}.
+\subsection{Hosts bestand}
+Voor de installatie van machine voor de verkoop gebruiken we hostnamen zoals \texttt{debianNN} (dit is bijvoorbeeld \texttt{debian02}).
+In \texttt{/etc/hosts} moet een hostnaam en een IP-adres worden gedefinieerd (zie eventueel \texttt{man hosts}).
+Op de hosts file met vim:
+\begin{lstlisting}[language=bash]
+vim /etc/hosts
+\end{lstlisting}
+Enkele tips hierbij zijn om de laatste regel van de vorm:
+\begin{lstlisting}[language=bash]
+10.0.x0.NNN			debianMM
+\end{lstlisting}
+te kopieren met \texttt{yy} en daaronder te plakken met \texttt{p}. Je navigeert tot onder het laatste getal van het ip-adres (in normal mode) met \texttt{E} (je kunt terug met \texttt{b}). Dan geef je \texttt{Control-a} om het getal met \'{e}\'{e}n op te hogen. Dit doe je ook het \texttt{debianMM}. Dan sla het bestand op het \texttt{ZZ}. Merk op dat je helemaal niet in insert mode hoeft te gaan.
+\subsection{DHCP-server instellen}
+Met het speciaal daarvoor bestemde fai-util \texttt{dhcp-edit} voeg je deze in vorige sectie gekozen hostnaam en mac-adres toe.
+\begin{lstlisting}[language=bash]
+dhcp-edit debianNN 00:11:22:33:44:55
+\end{lstlisting}
+\subsection{PXE instellen}
+Bij deze stap moet je weten of je een 32-bit of een 64-bit computer wilt installeren.
+Voor 64-bit luidt commando (op de \texttt{faijes}):
+\begin{lstlisting}[language=bash]
+pxe.sh debianNN
+\end{lstlisting}
+Voor 32-bit is het (op de \texttt{fai32}):
+\begin{lstlisting}[language=bash]
+pxe-i386.sh debianNN
+\end{lstlisting}
+
+Nu zou je je te installeren machine kunnen laten booten van haar netwerkkaart, al dan niet via \texttt{gPXE 1.0.1}-cdrom,  en de automatische installatie zou moeten beginnen.
+
