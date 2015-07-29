@@ -1,7 +1,5 @@
 \section{FAI server instellen}
 Om te kunnen bestaan heeft de nieuw te installeren machine een unieke hostnaam nodig van de vorm \texttt{debianNN}. Deze zal in \texttt{/etc/hosts} moeten worden opgenomen. Vervolgens moet het MAC-adres van de computer hieraan worden gekoppeld. Alle commando's die je in de volgende drie secties ziet staan, dienen als root op een faiserver uitgevoerd te worden.
-
-Indien je een 32-bit machine wilt installeren, neem je als faiserver de \texttt{fai32}, anders de \texttt{faijes}.
 \subsection{Hosts bestand}
 Voor de installatie van machine voor de verkoop gebruiken we hostnamen zoals \texttt{debianNN} (dit is bijvoorbeeld \texttt{debian02}).
 In \texttt{/etc/hosts} moet een hostnaam en een IP-adres worden gedefinieerd (zie eventueel \texttt{man hosts}).
@@ -21,11 +19,11 @@ dhcp-edit debianNN 00:11:22:33:44:55
 \end{lstlisting}
 \subsection{PXE instellen}
 Bij deze stap moet je weten of je een 32-bit of een 64-bit computer wilt installeren.
-Voor 64-bit luidt commando (op de \texttt{faijes}):
+Voor 64-bit luidt commando :
 \begin{lstlisting}[language=bash]
 pxe.sh debianNN
 \end{lstlisting}
-Voor 32-bit is het (op de \texttt{fai32}):
+Voor 32-bit is het:
 \begin{lstlisting}[language=bash]
 pxe-i386.sh debianNN
 \end{lstlisting}
