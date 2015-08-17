@@ -9,15 +9,7 @@
 \usepackage{float}
 \usepackage{hyperref}
 
-
-\begin{document}
-\lstset{language=bash}      
-\author{Steven L. Speek}
-\title{Hardware voorbereiding}
-\date{\today}
-%\maketitle
-
-\begin{tabular}{|l|p{6cm}|}
+\newcommand{\checklist}{\begin{tabular}{|l|p{6cm}|}
 	\hline
 	\multicolumn{2}{|c|}{\textbf{Hardware voorbereidings aftekenlijst}}\\
 	\hline
@@ -50,6 +42,21 @@
 	\hline
 	MAC-adres & \\
 	\hline
-\end{tabular}
+\end{tabular}}
+
+\pagestyle{empty}
+\begin{document}
+\lstset{language=bash}      
+\author{Steven L. Speek}
+\title{Hardware voorbereiding}
+\date{\today}
+%\maketitle
+\checklist{}
+
+\vspace{1cm}
+\checklist{}
+
+\vspace{1cm}
+\checklist{}
 
 \end{document}
