@@ -6,6 +6,9 @@ faipdf:
 handpdf:
 	pdflatex --output-directory output handmatig-artikel.tex; xpdf output/handmatig-artikel.pdf
 
+checkpdf:
+	pdflatex --output-directory output checksheet.tex; xpdf output/checksheet.pdf
+
 handhtml:
 	htlatex handmatig-artikel.tex installatie -utf8; x-www-browser handmatig-artikel.html
 
